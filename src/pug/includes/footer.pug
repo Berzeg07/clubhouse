@@ -1,9 +1,109 @@
-.footer
-    p Футер
+footer.footer
+    .footer__top
+        .footer__item
+            .logo.footer__logo
+                .logo__img.logo__img_footer     
+                    img(src="img/logo.png" alt="Клубный дом на покровке" width="91" height="125")
+                ul.logo__article
+                    li Клубный дом на
+                    li Покровке
+            
+            ul.footer__info
+                li
+                    span Адрес:
+                    .adress.footer__adress Москва, ЦАО, Покровка, 48
+                li
+                    span Телефон:
+                    a(href="tel:74950233880").phone-footer +7 (495) 023-38-80
+                li
+                    span E-mail:
+                    a(href="mailto:info@buonapart.ru").email-footer info@buonapart.ru
+            
+            a(href="#").btn Выбрать апартаменты
+            
+                    
+        .footer__item
+            ul.footer__nav
+                li
+                    a(href="#") О проекте
+                li
+                    a(href="#").main-nav__border Выбрать апартаменты
+                li
+                    a(href="#").main-nav__border Спецпредложения
+                li
+                    a(href="#") Варианты покупки   
+                li
+                    a(href="#") Контакты  
+            
+            .footer__list-wrap
+                .footer__column
+                    .footer__title.footer__title_first
+                        span Одноуровневые апартаменты
+                    
+                    ul.footer__list
+                        li
+                            a(href="#") Апартаменты №3 - 18,80 м
+                                sup 2
+                        li
+                            a(href="#") Апартаменты №3 - 21,20 м
+                                sup 2
+                        li
+                            a(href="#") Апартаменты №3 - 25,60 м
+                                sup 2
+                        li
+                            a(href="#") Апартаменты №3 - 22,80 м
+                                sup 2
+                        li
+                            a(href="#") Апартаменты №3 - 28,90 м
+                                sup 2
+                        li
+                            a(href="#") Апартаменты №3 - 29,40 м
+                                sup 2
+                            
+                .footer__column
+                    .footer__title.footer__title_second
+                        span Двухуровневые апартаменты
+                    
+                    ul.footer__list
+                        li
+                            a(href="#") Апартаменты №3 - 76,0 м
+                                sup 2
+                        li
+                            a(href="#") Апартаменты №3 - 81,10 м
+                                sup 2
+
+                .footer__column
+                    .footer__title.footer__title_third
+                        span Трехуровневые апартаменты
+                    
+                    ul.footer__list
+                        li
+                            a(href="#") Апартаменты №3 - 144,50 м
+                                sup 2
+                        li
+                            a(href="#") Апартаменты №3 - 149,80 м
+                                sup 2
+                    
+    .footer__bottom
+        .footer__item
+            .copy
+                .copy__img
+                    img(src="img/build-icon.png" width="151" height="51") 
+                span © 2020 Клубный дом на Покровке
+            
+        .footer__item
+            .metr
+                img(src="img/metr.png")
+            .developer
+                a(href="#")
+                    span Создание и продвижение сайта
+                    img(src="img/dev.png" width="120" height="34")
+                
+        
 
 
 
-include ./footer-modals.pug
+//- include ./footer-modals.pug
 script(src="libs/jquery/jquery-3.4.1.min.js")
 script(src="libs/parallax/parallax.min.js")
 script(src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js")
