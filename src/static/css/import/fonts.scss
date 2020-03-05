@@ -1,4 +1,13 @@
 @font-face {
+    font-family: "GoudyTrajan-Bold";
+    src: url("../fonts/GoudyTrajan-Bold/GoudyTrajan-Bold.eot");
+    src: local('☺'), url("../fonts/GoudyTrajan-Bold/GoudyTrajan-Bold.woff") format('woff'), url("../fonts/GoudyTrajan-Bold/GoudyTrajan-Bold.ttf") format('truetype');
+    font-display: swap;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: "Gilroy";
     src: url("../fonts/Gilroy-Light/Gilroy-Light.eot");
     src: local('☺'), url("../fonts/Gilroy-Light/Gilroy-Light.woff") format('woff'), url("../fonts/Gilroy-Light/Gilroy-Light.ttf") format('truetype');
