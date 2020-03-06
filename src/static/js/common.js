@@ -17,4 +17,18 @@ $(document).ready(function() {
         });
     });
 
+    var swiper = new Swiper('.main-slider', {
+        spaceBetween: 0,
+        effect: 'fade',
+        loop: 'true',
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
 });
