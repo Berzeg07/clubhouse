@@ -1,6 +1,19 @@
 $(document).ready(function() {
 
+    $(".plan-btn").click(function(e){
+            e.preventDefault();
+            var $this = $(this);
 
+            if( !$this.hasClass("active")){
+               $(".plan-mob__item").slideUp();
+               $(".plan-btn").removeClass("active");
+           }
+
+           $this.toggleClass("active");
+           $this.next().slideToggle();
+
+        });
+        // $(".plan-btn:first").click();
 
     $('.burger').click(function() {
         $(this).toggleClass('is-active');
