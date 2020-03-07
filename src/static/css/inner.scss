@@ -1,6 +1,6 @@
 .apartaments {
 	padding: 0 ;
-	padding-bottom: 19px;
+	padding-bottom: 77px;
 }
 
 .apartaments .breadcrumbs {
@@ -98,7 +98,9 @@
 .partners .owl-prev, .partners .owl-next {
 	position: absolute;
 	top: 50%;
+
 	margin-top: -32px;
+	
 	background-color: transparent;
 
 	@media (min-width : 1920px) {
@@ -162,6 +164,10 @@
 }
 
 /* Street */
+.apartaments-street {
+	margin-bottom: 33px;
+}
+
 .apartaments-street .img-block {
 	display: block;
 	
@@ -187,12 +193,10 @@
 .apartaments-street  .owl-prev, .apartaments-street  .owl-next {
 	position: absolute;
 	top: 50%;
+	
 	margin-top: -16px;
-	background-color: transparent;
 
-	@media (min-width : 1920px) {
-		margin-top: -32px;
-	}
+	background-color: transparent;
 }
 
 .apartaments-street .owl-prev span, .apartaments-street .owl-next span{
@@ -207,9 +211,102 @@
 
 .apartaments-street  .owl-prev {
 	left: 20px;
+
+	@media (min-width : 1200px) {
+		left: 60px;
+	}
 }
 
 .apartaments-street  .owl-next {
 	right: 20px;
 	transform: rotate(180deg);
+
+	@media (min-width : 1200px) {
+		right: 60px;
+	}
 }
+
+/* Layered
+=================================== */
+.layered__description {
+	font-family: "SFProDisplay";
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 25px;
+	color: rgba(0, 0, 0, 0.4);
+
+	max-width: 1610px;
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 38px;
+}
+
+.layered .is-active {
+	 border-bottom: none;
+	 opacity: 0.6;
+}
+
+.layered .plan-tabs__btn {
+	opacity: 0.6;
+    border-bottom: 4px solid #C39D69;
+
+
+	max-width: 200px;
+
+	@media (min-width : 480px) {
+		max-width: 300px;
+	}
+
+	@media (min-width : 768px) {
+		max-width: unset;
+	}	
+}
+
+.layered .plan-tabs__btn:hover {
+	opacity: 1;
+    @media (min-width : 768px) {
+    	border-bottom: 4px solid #C39D69;
+    }
+}
+
+.layered .plan-tabs__count {
+	right: 5px;
+
+	@media (min-width : 480px) {
+		right: -55px;
+	}
+    
+    @media (min-width : 768px) {
+    	right: 35px;
+    }
+
+    @media (min-width : 891px) {
+    	right: -40px;
+    	top: -45px;
+    }
+
+    @media (min-width : 892px) {
+    	right: -46px;
+    	top: -28px;
+    }
+}
+
+.layered .plan-tabs__links {
+	@media (max-width : 767px) {
+		flex-direction: column;
+		align-items: center;
+
+
+		a {
+			margin-bottom: 20px;
+			border-bottom: none;
+		}
+	}
+}
+
+.layered .plan-tabs__inner {
+	@media (max-width : 767px) {
+		border-bottom: none;
+	}
+}
+
