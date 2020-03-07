@@ -1,0 +1,215 @@
+.apartaments {
+	padding: 0 ;
+	padding-bottom: 19px;
+}
+
+.apartaments .breadcrumbs {
+	margin-bottom: 20px;
+}
+
+.breadcrumbs {
+	font-family: "SFProDisplay";
+	font-size: 18px;
+	line-height: 25px;
+
+	display: flex;
+	flex-wrap: wrap;
+
+	margin-top: 16px;
+	margin-left: -7px;
+}
+
+.breadcrumbs li {
+	position: relative;
+
+	margin-left: 7px;
+	padding-right: 27px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+
+	&::after {
+		content: "";
+
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+
+		background-image: url("../img/arrow.png");
+		background-repeat: no-repeat;
+		background-position: 0 0;
+
+		width: 22px;
+		height: 8px;
+	}
+
+	&:last-child {
+		&::after {
+			display: none;
+		}
+	}
+}
+
+.breadcrumbs a[href] {
+	color: #D8C5AB;
+	border-bottom: 1px solid #D8C5AB;
+}
+
+.breadcrumbs a:not(href) {
+	color: #B48542;
+}
+
+/* Apartaments 
+=============================================*/
+/* Partner */
+.partners {
+	position: relative;
+
+	margin-bottom: 88px;
+}
+
+.partners h1 {
+	margin-bottom: 35px;
+}
+
+.partners .item {
+	text-align: center;
+	
+	@media (max-width : 767px) {
+		margin-bottom: 20px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}	
+	}
+
+	span {
+		display: inline-block;
+		height: 60px;
+	}
+}
+
+.partners .owl-nav {
+	@media (min-width : 1920px) {
+		display: block !important;
+	}
+}
+
+.partners .owl-prev, .partners .owl-next {
+	position: absolute;
+	top: 50%;
+	margin-top: -32px;
+	background-color: transparent;
+
+	@media (min-width : 1920px) {
+		margin-top: -16px;
+	}
+}
+
+.partners .owl-prev span, .partners .owl-next span{
+	background-image: url("../img/arrow-left.png");
+	display: block;
+
+	font-size: 0;
+
+	width: 18px;
+	height: 32px;
+}
+
+.partners .owl-prev {
+	left: 0;
+
+	@media (min-width : 1920px) {
+		left: -78px
+	}
+}
+
+.partners .owl-next {
+	right: 0;
+	transform: rotate(180deg);
+
+	@media (min-width : 1920px) {
+		right: -78px
+	}
+}
+
+.partners .sberbank {
+	width: 235px;
+}
+
+.partners .vtb {
+	width: 108px;
+}
+
+.partners .gazprom {
+	width: 233px;
+}
+
+.partners .dom {
+	width: 141px;
+}
+
+.partners .rosbank {
+	width: 85px;
+}
+
+.partners .alfa {
+	width: 242px;
+}
+
+.partners .sovkom {
+	width: 241px;
+}
+
+/* Street */
+.apartaments-street .img-block {
+	display: block;
+	
+	@media (min-width : 768px) {
+		height: 300px;
+
+		img {
+			height: 100%;
+		}
+	}
+
+	@media (min-width : 1630px) {
+		height: 369px;
+	}
+}
+
+.apartaments-street .owl-nav {
+	@media (min-width : 1200px) {
+		display: block !important;
+	}
+}
+
+.apartaments-street  .owl-prev, .apartaments-street  .owl-next {
+	position: absolute;
+	top: 50%;
+	margin-top: -16px;
+	background-color: transparent;
+
+	@media (min-width : 1920px) {
+		margin-top: -32px;
+	}
+}
+
+.apartaments-street .owl-prev span, .apartaments-street .owl-next span{
+	background-image: url("../img/prev.png");
+	display: block;
+
+	font-size: 0;
+
+	width: 18px;
+	height: 32px;
+}
+
+.apartaments-street  .owl-prev {
+	left: 20px;
+}
+
+.apartaments-street  .owl-next {
+	right: 20px;
+	transform: rotate(180deg);
+}
