@@ -9,10 +9,90 @@
 				li
 					a Апартаменты № 1
 
-	
+	.apartaments__schemes
+		.container
+			h1.main-title Трехуровневые апартаменты №1
+			.tab-slider__block
+				.tab-slider__block
+					.plan-slider-wrap
+
+						.tab-slider__column.js-tabs
+							h2.info-about.apartaments__schemes-title Выберите уровень:
+
+							ul.apartaments__schemes-tabs
+								li
+									a(href="#").apartaments__schemes-tabs__btn 3
+									div
+										.info-about Площадь:
+										.info-data 43,1
+											span м
+											sup 2
+								li
+									a(href="#").apartaments__schemes-tabs__btn 2
+									div
+										.info-about Площадь:
+										.info-data 56,3
+											span м
+											sup 2
+								li
+									a(href="#").apartaments__schemes-tabs__btn.active 1
+									div
+										.info-about Площадь:
+										.info-data 46,9
+											span м
+											sup 2
+							p.description На первом уровне площадью 36,9 м2 могут разместиться пространства для общения и приема гостей, кухня и технические помещения
+							
+						.tab-slider__column
+							.plan-slider.swiper-container
+								.swiper-wrapper
+									.swiper-slide
+										.plan-slider__img
+											img(src="img/ap-plan-7.png")
+									.swiper-slide
+										.plan-slider__img
+											img(src="img/ap-plan-7.png")   
+									.swiper-slide
+										.plan-slider__img
+											img(src="img/ap-plan-7.png")
+
+								.swiper-pagination 
+								.swiper-button-next
+								.swiper-button-prev
+
+						.tab-slider__column
+							.tab-slider__article
+								ul.tab-slider__info.tab-silder__info-right
+									li
+										.info-about Общая площадь:
+										.info-data 144,50 
+											span м
+											sup 2
+									li
+										.info-about Стоимость апартаментов:
+										.info-data 556 000 
+											span руб.
+									li
+										.info-about Стоимость апартаментов:
+										.info-data 800 028 000 
+											span руб.
+
+								a(href="#").btn.tab-slider__btn.js-modal Записаться на просмотр
+
+							.apartament-modal
+								form
+									h3.main-title Онлайн заявка
+									input(type="text" placeholder="Ваше имя").name
+									input(type="text" placeholder="Контактный телефон").phone
+									textarea(placeholder="Комментарий").message
+									button(type="submit").btn.tab-slider__btn.modal-submit Записаться на просмотры
+									p Нажимая на кнопку я принимаю условия, даю согласие на <a href="#">обработку персональных данных</a>
+									button(type="button" class="modal-close js-modal-close") Закрыть
+
+
 	section.apartament__partners.partners
 		.container
-			h1.main-title Банки партнеры
+			h2.main-title Банки партнеры
 
 			.partners-block.owl-carousel.owl-carousel2
 					.item
@@ -53,7 +133,7 @@
 
 	section.layered
 		.container
-			h1.main-title.layered__title Многоуровневые апартаменты
+			h2.main-title.layered__title Многоуровневые апартаменты
 			p.layered__description Клубный дом на Покровке – это уникальный исторический особняк второй середины XXI века, состоящий из нескольких разноуровневых городских апартаментов. Клубный дом на Покровке расположен в тихом московском дворе между улицами Покровка и Машкова, в 250 м. от Садового кольца и 440 м. от Чистопрудного бульвараВ пешей доступности находятся несколько городских парков, достопримечательностей и общественных пространств, а также множество объектов инфраструктуры
 		.plan-tabs__inner
 			.plan-tabs__links.container
@@ -64,6 +144,5 @@
 				a(href="#").plan-tabs__btn Трехуровневые апартаменты
 					.plan-tabs__count 2
 
-
-
+.overlay
 

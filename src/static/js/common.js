@@ -75,17 +75,17 @@
                 },
             });
 
-            $('.plan-tabs__links a').click(function(e) {
-                e.preventDefault();
-                $('.plan-tabs__links a').removeClass('is-active');
-                $(this).addClass('is-active');
-                var tab = $(this).attr('href');
-                $('.tab-cont').not(tab).css({
-                    'display': 'none'
-                });
-                $(tab).fadeIn(400);
-            });
-            $('.plan-tabs__links a:first').click();
+            // $('.plan-tabs__links a').click(function(e) {
+            //     e.preventDefault();
+            //     $('.plan-tabs__links a').removeClass('is-active');
+            //     $(this).addClass('is-active');
+            //     var tab = $(this).attr('href');
+            //     $('.tab-cont').not(tab).css({
+            //         'display': 'none'
+            //     });
+            //     $(tab).fadeIn(400);
+            // });
+            // $('.plan-tabs__links a:first').click();
 
             /*partners carousel*/
             if ( $(window).width() < 768 ) {
@@ -123,6 +123,34 @@
                         items: 3
                     }
                 }
+            });
+
+            $('.js-modal').click(function() {
+                $('.apartament-modal').fadeIn();
+                if($(window).width() < 1280) {
+                    $('body').css({'overflow' : 'hidden'});
+                    $('.overlay').css('display', 'block');
+                }
+            });
+
+            $('.js-modal-close').click(function() {
+                $('.apartament-modal').fadeOut();
+
+                 if($(window).width() < 1280) {
+                    $('body').css({'overflow' : 'scroll'});
+                    $('.overlay').css('display', 'none');
+                }
+           });
+
+             $('.js-tabs a').click(function(e) {
+                e.preventDefault();
+                
+
+                $('.js-tabs a').each(function(i, item) {
+                        $(this).removeClass('active');
+                });
+
+                $(this).addClass('active');
             });
 
         });
