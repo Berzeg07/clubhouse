@@ -15,19 +15,7 @@ $(document).ready(function() {
         $($this).toggleClass('active');
     });
 
-    $(".plan-btn").click(function(e) {
-        e.preventDefault();
-        var $this = $(this);
 
-        if (!$this.hasClass("active")) {
-            $(".plan-mob__item").slideUp();
-            $(".plan-btn").removeClass("active");
-        }
-
-        $this.toggleClass("active");
-        $this.next().slideToggle();
-
-    });
     // $(".plan-btn:first").click();
 
     $('.burger').click(function() {
@@ -89,6 +77,68 @@ $(document).ready(function() {
             prevEl: '.swiper-button-prev',
         },
     });
+
+    // var accordSlider = null;
+    // var settings = {
+    //     spaceBetween: 0,
+    //     loop: 'true',
+    //     pagination: {
+    //         el: '.swiper-pagination',
+    //         clickable: true,
+    //     },
+    //     navigation: {
+    //         nextEl: '.swiper-button-next',
+    //         prevEl: '.swiper-button-prev',
+    //     },
+    // },
+    // planSliderMobile = new Swiper('.plan-slider_mob', settings);
+
+        // var planSliderMobile = new Swiper('.plan-slider_mob', {
+        //     spaceBetween: 0,
+        //     loop: 'true',
+        //     pagination: {
+        //         el: '.swiper-pagination',
+        //         clickable: true,
+        //     },
+        //     navigation: {
+        //         nextEl: '.swiper-button-next',
+        //         prevEl: '.swiper-button-prev',
+        //     },
+        // });
+
+        // $(".plan-btn").click(function(e) {
+        //     e.preventDefault();
+        //     var $this = $(this);
+        //     var planSliderMobile = new Swiper('.plan-slider_mob', settings)
+        //
+        //     planSliderMobile.destroy();
+        //
+        //     if (!$this.hasClass("active")) {
+        //         $(".plan-mob__item").slideUp();
+        //         $(".plan-btn").removeClass("active");
+        //     }
+        //
+        //     $this.toggleClass("active");
+        //     $this.next().slideToggle();
+        //
+        // });
+
+
+
+
+    // $(".plan-btn").click(function(e) {
+    //     e.preventDefault();
+    //     var $this = $(this);
+    //
+    //     if (!$this.hasClass("active")) {
+    //         $(".plan-mob__item").slideUp();
+    //         $(".plan-btn").removeClass("active");
+    //     }
+    //
+    //     $this.toggleClass("active");
+    //     $this.next().slideToggle();
+    //
+    // });
 
     $('#tabsLink a').click(function(e) {
         e.preventDefault();
@@ -180,57 +230,60 @@ $(document).ready(function() {
     });
 
     // Area maps *
-    var show = $('.table-block');
-    var showTop = show.offset().top;
-    var newMap = document.querySelector('.new-map');
-    $(window).bind('scroll', function() {
-        var windowTop = $(this).scrollTop();
-        if (windowTop > showTop) {
-            $(window).unbind('scroll');
-            newMap.setAttribute("src", "https://api-maps.yandex.ru/2.1/?lang=ru_RU");
-            setTimeout(function() {
-                ymaps.ready(init);
+    var checkDiv = document.querySelector('.table-block');
+    if (checkDiv != null) {
+        var show = $('.table-block');
+        var showTop = show.offset().top;
+        var newMap = document.querySelector('.new-map');
+        $(window).bind('scroll', function() {
+            var windowTop = $(this).scrollTop();
+            if (windowTop > showTop) {
+                $(window).unbind('scroll');
+                newMap.setAttribute("src", "https://api-maps.yandex.ru/2.1/?lang=ru_RU");
+                setTimeout(function() {
+                    ymaps.ready(init);
 
-                function init() {
+                    function init() {
 
-                    var center = [55.763290, 37.654817];
-                    var myMap = new ymaps.Map('mapMain', {
-                        center: center,
-                        controls: [],
-                        zoom: 16
-                    }, {
-                        searchControlProvider: 'yandex#search'
-                    });
+                        var center = [55.763290, 37.654817];
+                        var myMap = new ymaps.Map('mapMain', {
+                            center: center,
+                            controls: [],
+                            zoom: 16
+                        }, {
+                            searchControlProvider: 'yandex#search'
+                        });
 
-                    myMap.behaviors.disable('scrollZoom');
+                        myMap.behaviors.disable('scrollZoom');
 
-                    var myPlacemark = new ymaps.Placemark(center, {
-                        // Свойства.
-                        // Содержимое иконки, балуна и хинта.
-                        balloonContent: 'улица Покровка, 48',
-                        hintContent: 'улица Покровка, 48'
-                    }, {
-                        // Опции.
-                        iconLayout: 'default#image',
-                        iconImageHref: '../img/baloon.png',
-                        iconImageSize: [136, 165]
-                        // preset: 'twirl#violetIcon'
-                    });
+                        var myPlacemark = new ymaps.Placemark(center, {
+                            // Свойства.
+                            // Содержимое иконки, балуна и хинта.
+                            balloonContent: 'улица Покровка, 48',
+                            hintContent: 'улица Покровка, 48'
+                        }, {
+                            // Опции.
+                            iconLayout: 'default#image',
+                            iconImageHref: '../img/baloon.png',
+                            iconImageSize: [136, 165]
+                            // preset: 'twirl#violetIcon'
+                        });
 
-                    // myMap.controls.add('zoomControl', {
-                    //     float: 'none',
-                    //     position: {
-                    //         right: 40,
-                    //         top: 5
-                    //     }
-                    // });
+                        // myMap.controls.add('zoomControl', {
+                        //     float: 'none',
+                        //     position: {
+                        //         right: 40,
+                        //         top: 5
+                        //     }
+                        // });
 
-                    myMap.geoObjects.add(myPlacemark);
-                }
-            }, 500);
-            return;
-        }
+                        myMap.geoObjects.add(myPlacemark);
+                    }
+                }, 500);
+                return;
+            }
 
-    });
+        });
+    }
 
 });
