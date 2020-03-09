@@ -32,7 +32,7 @@
 
     .plan-tabs
         .plan-tabs__inner
-            .container.plan-tabs__links
+            .container.plan-tabs__links#tabsLink
                 a(href="#tab1").plan-tabs__btn Одноуровневые апартаменты
                     .plan-tabs__count 8
 
@@ -817,7 +817,7 @@
             a(href="#").btn.tab-slider__btn Подробнее 
 
 .flat-info
-    button.flat-info__btn.btn(type="button") Повернуть здание
+    button.flat-info__btn.btn.active(type="button") Повернуть здание
     .flat-info__front.flat-info__item
         img(src="img/plan-front.jpg")
         .flat-info__layer.layer-8
@@ -1059,3 +1059,131 @@
                     span 22,8
                         b м
                             sup 2
+.table-block.container
+    h2.main-title Апартаменты в продаже
+    .table-block__title Одноуровневые апартаменты
+    
+    table.table-info.one-level
+        thead
+            tr
+                td Апартаменты
+                td Кол-во уровней
+                td Площадь, м
+                    sup 2
+                td Стоимость за м
+                    sup 2
+                td Стоимость апартаментов
+        tbody
+            tr
+                td Апартаменты №3
+                td 1
+                td 18,80
+                td 550 000 руб.
+                td 10 716 000 руб. 
+                
+            tr
+                td Апартаменты №4
+                td 1
+                td 21,20
+                td 550 000 руб.
+                td 12 084 000 руб.
+                
+            tr
+                td Апартаменты №3
+                td 1
+                td 18,80
+                td 550 000 руб.
+                td 10 716 000 руб.
+    
+    .table-block__title Двухуровневые апартаменты          
+    table.table-info.two-level
+        thead
+            tr
+                td Апартаменты
+                td Кол-во уровней
+                td Площадь, м
+                    sup 2
+                td Стоимость за м
+                    sup 2
+                td Стоимость апартаментов
+        tbody
+            tr
+                td Апартаменты №3
+                td 1
+                td 18,80
+                td 550 000 руб.
+                td 10 716 000 руб. 
+                
+            tr
+                td Апартаменты №4
+                td 1
+                td 21,20
+                td 550 000 руб.
+                td 12 084 000 руб.
+                
+    .table-block__title Трехуровневые апартаменты          
+    table.table-info.three-level
+        thead
+            tr
+                td Апартаменты
+                td Кол-во уровней
+                td Площадь, м
+                    sup 2
+                td Стоимость за м
+                    sup 2
+                td Стоимость апартаментов
+        tbody
+            tr
+                td Апартаменты №3
+                td 1
+                td 18,80
+                td 550 000 руб.
+                td 10 716 000 руб. 
+                
+            tr
+                td Апартаменты №4
+                td 1
+                td 21,20
+                td 550 000 руб.
+                td 12 084 000 руб.
+
+.location-info
+    h2.main-title Клубный дом расположен между улицами Покровка и Машкова
+    
+    .location-info__inner
+        .line-block
+            .line-block__inner
+                .line-block__item
+                .line-block__ellipse
+                .line-block__item
+            
+        .location-info__item.location-info__item_left
+            img(src="img/sl-1.jpg")
+            .location-overlay
+                .location-overlay__item от Садового кольца
+                .location-overlay__item 250
+                    span м.
+                
+                
+        .location-info__item.location-info__item_center
+            img(src="img/sl-2.jpg")
+            .location-overlay
+                .location-info__logo
+                    img(src="img/logo.png" width="94" height="124")
+                .marker
+                    img(src="img/place.png" width="55" height="55")
+
+                
+                
+        .location-info__item.location-info__item_right
+            img(src="img/sl-3.jpg")
+            .location-overlay
+                .location-overlay__item от Чистопрудного бульвара
+                .location-overlay__item 440
+                    span м.
+                
+                
+        
+        
+        
+             
