@@ -2,13 +2,16 @@
 
         $('.flat-info__btn').click(function() {
             var $this = $(this);
-            $('.flat-info__front').fadeOut();
+            $('.flat-info__front, .flat-info__back').removeAttr('style');
+            $('.flat-info__front').addClass('hide');
             $('.flat-info__back').fadeIn();
+            $('.flat-info__back').removeClass('hide');
             if (!$this.hasClass("active")) {
+                $('.flat-info__front, .flat-info__back').removeAttr('style');
                 $('.flat-info__front').fadeIn();
-                $('.flat-info__back').fadeOut();
+                $('.flat-info__front').removeClass('hide');
+                $('.flat-info__back').addClass('hide');
             }
-
             $($this).toggleClass('active');
         });
 
