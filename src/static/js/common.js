@@ -126,6 +126,7 @@ $(document).ready(function() {
     $('.owl-carousel2').owlCarousel({
         loop: true,
         nav: true,
+        margin: 10,
         responsive: {
             0: {
                 items: 1
@@ -139,7 +140,7 @@ $(document).ready(function() {
             1630: {
                 items: 5
             },
-            1919: {
+            1920: {
                 items: 7
             }
         }
@@ -156,6 +157,8 @@ $(document).ready(function() {
             $('.overlay').css('display', 'block');
         }
     });
+
+    $(".apartament-modal .phone").mask("+7(999)999-99-99");
 
     $('.js-modal-close').click(function() {
         $('.apartament-modal').fadeOut();

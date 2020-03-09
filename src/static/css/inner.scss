@@ -135,33 +135,33 @@
 	}
 }
 
-.partners .sberbank {
-	width: 235px;
-}
+// .partners .sberbank {
+// 	width: 235px;
+// }
 
-.partners .vtb {
-	width: 108px;
-}
+// .partners .vtb {
+// 	width: 108px;
+// }
 
-.partners .gazprom {
-	width: 233px;
-}
+// .partners .gazprom {
+// 	width: 233px;
+// }
 
-.partners .dom {
-	width: 141px;
-}
+// .partners .dom {
+// 	width: 141px;
+// }
 
-.partners .rosbank {
-	width: 85px;
-}
+// .partners .rosbank {
+// 	width: 85px;
+// }
 
-.partners .alfa {
-	width: 242px;
-}
+// .partners .alfa {
+// 	width: 242px;
+// }
 
-.partners .sovkom {
-	width: 241px;
-}
+// .partners .sovkom {
+// 	width: 241px;
+// }
 
 /* Street */
 .apartaments-street {
@@ -337,6 +337,14 @@
 		margin-left: 0;
 		margin-bottom: 0;
 		flex-direction: column;
+	}
+
+	@media (min-width : 1600px) {
+		margin-left: 20px;
+	}
+
+	@media (min-width : 1920px) {
+		margin-left: 0;
 	}
 }
 
