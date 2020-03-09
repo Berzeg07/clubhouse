@@ -135,34 +135,6 @@
 	}
 }
 
-// .partners .sberbank {
-// 	width: 235px;
-// }
-
-// .partners .vtb {
-// 	width: 108px;
-// }
-
-// .partners .gazprom {
-// 	width: 233px;
-// }
-
-// .partners .dom {
-// 	width: 141px;
-// }
-
-// .partners .rosbank {
-// 	width: 85px;
-// }
-
-// .partners .alfa {
-// 	width: 242px;
-// }
-
-// .partners .sovkom {
-// 	width: 241px;
-// }
-
 /* Street */
 .apartaments-street {
 	margin-bottom: 33px;
@@ -317,8 +289,89 @@
 
 /*.apartaments__schemes
 ====================================================*/
+.apartaments__schemes .my-container {
+	max-width: 1872px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+
+@media print {
+	.header {
+		display: none;
+	}
+	.footer{
+		display: none;
+	}
+
+	.apartaments__schemes {
+		width: 1800px;
+	}
+
+	.apartaments {
+		.breadcrumbs-block {
+			display: none;
+		}
+		.apartament__partners.partners {
+			display: none;
+		}
+		
+		.apartaments-street {
+			display: none;
+		}
+
+		.layered {
+			display: none;
+		}
+	} 
+}
 .apartaments__schemes {
 	margin-bottom: 48px;
+}
+
+.apartaments__schemes {
+	.compass {
+		position: absolute;
+		top: 0px;
+		left: 0;
+		background-image: url('../img/compas.png');
+		width: 57px;
+		height: 76px;
+
+		@media (min-width : 768px) {
+			top: 24px;
+		}
+	}
+
+	.print {
+		display: none;
+
+		@media (min-width : 992px) {
+			display: block;
+			background-color: transparent;
+			background-image: url("../img/print.png");
+			width: 28px;
+			height: 28px;
+			position: absolute;
+			bottom: 33px;
+			right: 24px;
+			cursor: pointer;
+		}
+	}
+
+	.heart {
+		background-image: url("../img/heart.png");
+		background-color: transparent;
+		width: 28px;
+		height: 28px;
+		position: absolute;
+		right: 10px;
+		top: 10px;
+
+		@media (min-width : 768px) {
+			right: 40px;
+			top: 40px;
+		}
+	}
 }
 
 .apartaments__schemes-tabs {
@@ -414,12 +467,12 @@
 	padding: 0;
 
 	@media (min-width : 1600px) {
-		max-width: 955px;
+		max-width: 1090px;
 		width: 100%;
 	}
 
 	@media (min-width : 1920px) {
-		width: 926px;
+		width: 945px;
 		max-width: 100%;
 	}
 }
@@ -565,12 +618,12 @@
 	}
 
 	@media (min-width : 1600px) {
-		max-width: 955px;
+		max-width: 1090px;
 		width: 100%;
 	}
 
 	@media (min-width : 1920px) {
-		width: 926px;
+		width: 945px;
 		height: 600px;
 	}
 }

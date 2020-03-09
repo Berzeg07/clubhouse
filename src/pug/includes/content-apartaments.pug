@@ -10,7 +10,7 @@
 					a Апартаменты № 1
 
 	.apartaments__schemes
-		.container
+		.my-container
 			h1.main-title Трехуровневые апартаменты №1
 			.tab-slider__block
 				.tab-slider__block
@@ -49,12 +49,21 @@
 									.swiper-slide
 										.plan-slider__img
 											img(src="img/ap-plan-6.png")
+										div.compass
+										button(aria-label="Сердце").heart
+										button(aria-label="Распечатать" onClick="window.print()").print
 									.swiper-slide
 										.plan-slider__img
-											img(src="img/ap-plan-5.png")   
+											img(src="img/ap-plan-5.png")
+										div.compass
+										button(aria-label="Сердце").heart
+										button(aria-label="Распечатать" onClick="window.print()").print 
 									.swiper-slide
 										.plan-slider__img
 											img(src="img/ap-plan-7.png")
+										div.compass
+										button(aria-label="Сердце").heart
+										button(aria-label="Распечатать" onClick="window.print()").print
 
 								.swiper-pagination 
 								.swiper-button-next
@@ -123,6 +132,7 @@
 			.item
 				span.img-block
 					img(src="img/sl-1.jpg" alt="Апартаменты-1" width="656" height="396")
+
 			.item
 				span.img-block
 					img(src="img/sl-2.jpg" alt="Апартаменты-2" width="608" height="396")
