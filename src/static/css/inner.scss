@@ -263,7 +263,7 @@
 	}
 
 	@media (min-width : 768px) {
-		max-width: unset;
+		max-width: 100%;
 	}	
 }
 
@@ -325,7 +325,8 @@
 	display: flex;
 	flex-direction: column;
 
-	@media (min-width : 768px) {
+	@media (min-width : 576px) {
+		flex-direction: row;
 		flex-direction: row;
 		margin-left: -30px;
 	}
@@ -348,10 +349,13 @@
 		margin-bottom: 0;
 	}
 
-	@media (min-width : 768px) {
+	@media (min-width : 576px) {
+		
 		margin-left: 30px;
 		margin-bottom: 0;
 	}
+
+
 
 	@media (min-width : 1280px) {
 		margin-bottom: 30px;
@@ -399,7 +403,7 @@
 
 .apartaments__schemes .tab-slider__column:nth-of-type(3) {
 	background: #FFE0B1;
-	padding-bottom: 20px;
+	padding: 20px;
 
 	@media (min-width : 768px) {
 		padding-top: 20px;
@@ -412,9 +416,10 @@
 	}
 
 	.tab-silder__info-right {
-		@media (min-width : 768px) {
+		@media (min-width : 576px) {
 			display: flex;
 			margin-left: -30px;
+			margin-bottom: 20px;
 		}
 		@media (min-width : 1280px) {
 			margin-left: 0;
@@ -486,7 +491,6 @@
 }
 
 .apartaments .plan-slider-wrap {
-	max-width: 320px;
 	width: 100%;
 	margin: 0 auto;
 
@@ -496,7 +500,7 @@
 
 	@media (min-width : 1280px) {
 		width: 1260px;
-		max-width: unset;
+		max-width: 100%;
 	}
 
 	@media (min-width : 1920px) {
@@ -506,7 +510,6 @@
 
 .apartaments__schemes .plan-slider {
 	width: 100%;
-	height: 225px;
 
 	@media (min-width : 768px) {
 		height: 330px;
@@ -535,6 +538,7 @@
 
 	@media (min-width : 1920px) {
 		width: 320px;
+		max-width: 100%;
 		display: block;
 		margin: 0;
 	}
@@ -547,7 +551,7 @@
 		margin-bottom: 0;
 	}
 
-	@media (min-width : 768px) {
+	@media (min-width : 576px) {
 		margin-bottom: 0;
 		margin-left: 30px;
 	}
@@ -572,7 +576,7 @@
 }
 
 .apartaments__schemes .plan-slider__img {
-	max-width: unset;
+	max-width: 100%;
 }
 
 .apartaments__schemes .tab-slider__column .description {
@@ -613,7 +617,7 @@
 		top: 0;
 		left: 0;
 		transform: none;
-		z-index: unset;
+		z-index: 0;
 	}
 
 	position: fixed;
@@ -774,7 +778,7 @@
 	}	
 
 	@media (min-width : 1920px) {
-		max-width: unset;
+		max-width: 100%;
 		width: 340px;
 		height: 76px;
 		margin: 0 auto;

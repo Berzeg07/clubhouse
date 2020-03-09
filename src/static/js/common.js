@@ -103,13 +103,19 @@
         $('#tabsLink a:first').click();
 
         /*partners carousel*/
+
+        
+        if($(window).width() < 768) {
+            $('.owl-carousel2').removeClass('owl-carousel').removeClass('owl-carousel2');
+        }
+        
+
         $('.owl-carousel3').owlCarousel({
             loop: true,
             nav: true,
             responsive: {
                 0: {
-                    items: 0,
-                    loop: false
+                    items: 1,
                 },
                 768: {
                     items: 2
@@ -120,12 +126,15 @@
             }
         });
 
-       
+
 
         $('.owl-carousel2').owlCarousel({
             loop: true,
             nav: true,
             responsive: {
+                0: {
+                    items: 1
+                },
                 768: {
                     items: 2
                 },
@@ -141,7 +150,9 @@
             }
         });
 
-        $('.js-modal').click(function() {
+        $('.js-modal').click(function(e) {
+            e.preventDefault();
+
             $('.apartament-modal').fadeIn();
             if ($(window).width() < 1280) {
                 $('body').css({
