@@ -103,9 +103,24 @@
         $('#tabsLink a:first').click();
 
         /*partners carousel*/
-        if ($(window).width() < 768) {
-            $('.partners-block').removeClass('owl-carousel').removeClass('owl-carousel2');
-        }
+        $('.owl-carousel3').owlCarousel({
+            loop: true,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 0,
+                    loop: false
+                },
+                768: {
+                    items: 2
+                },
+                1200: {
+                    items: 3
+                }
+            }
+        });
+
+       
 
         $('.owl-carousel2').owlCarousel({
             loop: true,
@@ -117,25 +132,11 @@
                 992: {
                     items: 3
                 },
-                1920: {
+                1630: {
+                    items: 5
+                },
+                1919: {
                     items: 7
-                }
-            }
-        });
-
-        $('.owl-carousel3').owlCarousel({
-            loop: true,
-            nav: true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-
-                768: {
-                    items: 2
-                },
-                1200: {
-                    items: 3
                 }
             }
         });
