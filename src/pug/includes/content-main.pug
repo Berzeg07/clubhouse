@@ -7,27 +7,30 @@
                 li 
                     .main-slider__text Клубный дом на Покровке <br>
                         span в самом сердце столицы
-                li Разноуровневые апартаменты от 19 м2 до 149 м2
+                li Разноуровневые апартаменты от 19 м
+                    sup 2 
+                    |до 149 м
+                    sup 2
 
         .main-slider__column
-            button.btn(type="button") Выбрать апартаменты
+            button.btn.main-slider__btn(type="button") Выбрать апартаменты
 
     .swiper-wrapper
-        .swiper-slide(style="background-image:url(../img/hotel.jpg)")
-        .swiper-slide(style="background-image:url(../img/plan-back.jpg)")
-        .swiper-slide(style="background-image:url(../img/plan-front.jpg)")
+        .swiper-slide(style="background-image:url(img/hotel.jpg)")
+        .swiper-slide(style="background-image:url(img/plan-back.jpg)")
+        .swiper-slide(style="background-image:url(img/plan-front.jpg)")
 
     .swiper-pagination
 
     .swiper-button-next 
     .swiper-button-prev
 
-.about-apartament.container
+.about-apartament.container.wow.fadeIn(data-wow-duration="1.5s" data-wow-offset="20")
     h1.main-title Многоуровневые апартаменты в клубном доме на Покровке
     .main-text
         p Клубный дом на Покровке – это уникальный исторический особняк второй середины XXI века, состоящий из нескольких разноуровневых городских апартаментов. Клубный дом на Покровке расположен в тихом московском дворе между улицами Покровка и Машкова, в 250 м. от Садового кольца и 440 м. от Чистопрудного бульвара в пешей доступности находятся несколько городских парков, достопримечательностей и общественных пространств, а также множество объектов инфраструктуры
 
-.pick-plan
+.pick-plan.wow.fadeIn(data-wow-duration="1.5s" data-wow-offset="20")
     h2.main-title Выберите апартаменты:
 
     .plan-tabs
@@ -694,7 +697,7 @@
                 .swiper-button-next.swiper-button-next_main
                 .swiper-button-prev.swiper-button-prev_main       
 
-.plan-mob
+.plan-mob.wow.fadeIn(data-wow-duration="1.5s" data-wow-offset="20")
     .plan-mob__column
         button(type="button").btn.plan-btn.plan-btn_first
             span Одноуровневые
@@ -816,7 +819,7 @@
 
             a(href="#").btn.tab-slider__btn Подробнее 
 
-.flat-info
+.flat-info.wow.fadeIn(data-wow-duration="1.5s" data-wow-offset="20")
     button.flat-info__btn.btn.active(type="button") Повернуть здание
     .flat-info__front.flat-info__item
         img(src="img/plan-front.jpg")
@@ -1060,7 +1063,7 @@
                         b м
                             sup 2
 
-.apartament__partners.partners
+.apartament__partners.partners.wow.fadeIn(data-wow-duration="1.5s" data-wow-offset="20")
     .container
         h2.main-title.main-title_banks Банки партнеры
 
@@ -1090,7 +1093,7 @@
         .partners__btn-block
             a(href="#").btn Варианты покупки
                                                         
-.table-block.container
+.table-block.container.wow.fadeIn(data-wow-duration="1.5s" data-wow-offset="20")
     h2.main-title Апартаменты в продаже
     .table-block__title Одноуровневые апартаменты
     
@@ -1178,7 +1181,7 @@
                 td 550 000 руб.
                 td 12 084 000 руб.
 
-.location-info
+.location-info.wow.fadeIn(data-wow-duration="1.5s" data-wow-offset="20")
     h2.main-title Клубный дом расположен между улицами Покровка и Машкова
     
     .location-info__inner
@@ -1210,7 +1213,7 @@
                 .location-overlay__item 440
                     span м.
                 
-.main-map#mapMain
+.main-map#mapMain.wow.fadeIn(data-wow-duration="1.5s" data-wow-offset="20")
     .adress-info
         ul.adress-info__list
             li

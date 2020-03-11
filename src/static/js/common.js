@@ -15,6 +15,8 @@ $(document).ready(function() {
         $($this).toggleClass('active');
     });
 
+    new WOW().init();
+
 
     // $(".plan-btn:first").click();
 
@@ -24,17 +26,7 @@ $(document).ready(function() {
         $('body').toggleClass('overflow-hidden');
     });
 
-    $(function() {
-        $(window).scroll(function() {
-            if ($(this).scrollTop() >= 96) {
-                $('.header__bottom').addClass('stickytop');
-                $('.header').addClass('header-height-fixed');
-            } else {
-                $('.header__bottom').removeClass('stickytop');
-                $('.header').removeClass('header-height-fixed');
-            }
-        });
-    });
+
 
     var tabSlider = new Swiper('.tab-slider', {
         simulateTouch: false,
@@ -65,6 +57,20 @@ $(document).ready(function() {
         },
     });
 
+    // var mainSlider = new Swiper('.arh-slider', {
+    //     spaceBetween: 0,
+    //     effect: 'fade',
+    //     loop: 'true',
+    //     pagination: {
+    //         el: '.swiper-pagination',
+    //         clickable: true
+    //     },
+    //     navigation: {
+    //         nextEl: '.swiper-button-next',
+    //         prevEl: '.swiper-button-prev',
+    //     },
+    // });
+
     var planSlider = new Swiper('.plan-slider', {
         spaceBetween: 0,
         loop: 'true',
@@ -78,67 +84,26 @@ $(document).ready(function() {
         },
     });
 
-    // var accordSlider = null;
-    // var settings = {
-    //     spaceBetween: 0,
-    //     loop: 'true',
-    //     pagination: {
-    //         el: '.swiper-pagination',
-    //         clickable: true,
-    //     },
-    //     navigation: {
-    //         nextEl: '.swiper-button-next',
-    //         prevEl: '.swiper-button-prev',
-    //     },
-    // },
-    // planSliderMobile = new Swiper('.plan-slider_mob', settings);
+    // var allSliders = document.querySelectorAll('.plan-slider');
 
-        // var planSliderMobile = new Swiper('.plan-slider_mob', {
-        //     spaceBetween: 0,
-        //     loop: 'true',
-        //     pagination: {
-        //         el: '.swiper-pagination',
-        //         clickable: true,
-        //     },
-        //     navigation: {
-        //         nextEl: '.swiper-button-next',
-        //         prevEl: '.swiper-button-prev',
-        //     },
-        // });
-
-        // $(".plan-btn").click(function(e) {
-        //     e.preventDefault();
-        //     var $this = $(this);
-        //     var planSliderMobile = new Swiper('.plan-slider_mob', settings)
-        //
-        //     planSliderMobile.destroy();
-        //
-        //     if (!$this.hasClass("active")) {
-        //         $(".plan-mob__item").slideUp();
-        //         $(".plan-btn").removeClass("active");
-        //     }
-        //
-        //     $this.toggleClass("active");
-        //     $this.next().slideToggle();
-        //
-        // });
+    $(".plan-btn").click(function(e) {
+        e.preventDefault();
+        var $this = $(this);
 
 
+        if (!$this.hasClass("active")) {
+            // $(".plan-mob__item").slideUp();
+            $(".plan-mob__item").removeClass('active');
+
+            $(".plan-btn").removeClass("active");
+        }
+
+        $this.toggleClass("active");
+        // $this.next().slideToggle();
+        $this.next().addClass('active');
 
 
-    // $(".plan-btn").click(function(e) {
-    //     e.preventDefault();
-    //     var $this = $(this);
-    //
-    //     if (!$this.hasClass("active")) {
-    //         $(".plan-mob__item").slideUp();
-    //         $(".plan-btn").removeClass("active");
-    //     }
-    //
-    //     $this.toggleClass("active");
-    //     $this.next().slideToggle();
-    //
-    // });
+    });
 
     $('#tabsLink a').click(function(e) {
         e.preventDefault();
@@ -229,102 +194,117 @@ $(document).ready(function() {
         $(this).addClass('active');
     });
 
-    /*Print*/
-    // $('.apartaments__schemes .print').each(function(i, item) {
-    //     $(this).click(function() {
-    //         PrintElem('.apartaments__schemes');
+    // $(function() {
+    //     $(window).scroll(function() {
+    //         if ($(this).scrollTop() >= 96) {
+    //             $('.header__bottom').addClass('stickytop');
+    //             $('.header').addClass('header-height-fixed');
+    //             $('.header__logo, .phone-header').addClass('sticky-el');
+    //
+    //         }else{
+    //             $('.header__bottom').removeClass('stickytop');
+    //             $('.header').removeClass('header-height-fixed');
+    //             $('.header__logo, .phone-header').removeClass('sticky-el');
+    //
+    //         }
+    //         console.log($(this).scrollTop());
     //     });
     // });
 
-    // function PrintElem(elem)
-    // {
-    //     Popup($(elem).html());
-    // }
+    function stickyTop() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() >= 96) {
+                $('.header__bottom').addClass('stickytop');
+                $('.header').addClass('header-height-fixed');
+                $('.header__logo, .phone-header').addClass('sticky-el');
 
+            } else {
+                $('.header__bottom').removeClass('stickytop');
+                $('.header').removeClass('header-height-fixed');
+                $('.header__logo, .phone-header').removeClass('sticky-el');
 
-    // function Popup(data)
-
-    // {
-
-    //     var mywindow = window.open('', 'my div', 'height=600, width=960');
-
-    //     mywindow.document.write('<html><head><title>my div</title>');
-
-    //     mywindow.document.write('<link rel="stylesheet" href="css/main.css" type="text/css" />');
-
-    //     mywindow.document.write('</head><body >');
-
-    //     mywindow.document.write(data);
-
-    //     mywindow.document.write('</body></html>');
-
-    //     mywindow.document.close(); // necessary for IE >= 10
-
-    //     mywindow.focus(); // necessary for IE >= 10
-
-    //     mywindow.print();
-
-    //     // mywindow.close();
-
-    //     return true;
-    // }
-
-
-    // Area maps *
-    var checkDiv = document.querySelector('.table-block');
-    if (checkDiv != null) {
-        var show = $('.table-block');
-        var showTop = show.offset().top;
-        var newMap = document.querySelector('.new-map');
-        $(window).bind('scroll', function() {
-            var windowTop = $(this).scrollTop();
-            if (windowTop > showTop) {
-                $(window).unbind('scroll');
-                newMap.setAttribute("src", "https://api-maps.yandex.ru/2.1/?lang=ru_RU");
-                setTimeout(function() {
-                    ymaps.ready(init);
-
-                    function init() {
-
-                        var center = [55.763290, 37.654817];
-                        var myMap = new ymaps.Map('mapMain', {
-                            center: center,
-                            controls: [],
-                            zoom: 16
-                        }, {
-                            searchControlProvider: 'yandex#search'
-                        });
-
-                        myMap.behaviors.disable('scrollZoom');
-
-                        var myPlacemark = new ymaps.Placemark(center, {
-                            // Свойства.
-                            // Содержимое иконки, балуна и хинта.
-                            balloonContent: 'улица Покровка, 48',
-                            hintContent: 'улица Покровка, 48'
-                        }, {
-                            // Опции.
-                            iconLayout: 'default#image',
-                            iconImageHref: '../img/baloon.png',
-                            iconImageSize: [136, 165]
-                            // preset: 'twirl#violetIcon'
-                        });
-
-                        // myMap.controls.add('zoomControl', {
-                        //     float: 'none',
-                        //     position: {
-                        //         right: 40,
-                        //         top: 5
-                        //     }
-                        // });
-
-                        myMap.geoObjects.add(myPlacemark);
-                    }
-                }, 500);
-                return;
             }
-
         });
     }
+
+    stickyTop();
+
+    var checkDiv = document.querySelector('#mapMain');
+
+    if (checkDiv != null) {
+
+        ymaps.ready(init);
+
+        function init() {
+
+            var center = [55.763290, 37.654817];
+            var myMap = new ymaps.Map('mapMain', {
+                center: center,
+                controls: [],
+                zoom: 16
+            }, {
+                searchControlProvider: 'yandex#search'
+            });
+
+            myMap.behaviors.disable('scrollZoom');
+
+            var myPlacemark = new ymaps.Placemark(center, {
+                balloonContent: 'улица Покровка, 48',
+                hintContent: 'улица Покровка, 48'
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: 'img/baloon.png',
+                iconImageSize: [136, 165]
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+        }
+    }
+
+    // var checkDiv = document.querySelector('.table-block');
+    // if (checkDiv != null) {
+    //     var show = $('.table-block');
+    //     var showTop = show.offset().top;
+    //     var newMap = document.querySelector('.new-map');
+    //     $(window).bind('scroll', function() {
+    //         var windowTop = $(this).scrollTop();
+    //         if (windowTop > showTop) {
+    //             // $(window).unbind('scroll');
+    //
+    //             newMap.setAttribute("src", "https://api-maps.yandex.ru/2.1/?lang=ru_RU");
+    //             setTimeout(function() {
+    //                 ymaps.ready(init);
+    //
+    //                 function init() {
+    //
+    //                     var center = [55.763290, 37.654817];
+    //                     var myMap = new ymaps.Map('mapMain', {
+    //                         center: center,
+    //                         controls: [],
+    //                         zoom: 16
+    //                     }, {
+    //                         searchControlProvider: 'yandex#search'
+    //                     });
+    //
+    //                     myMap.behaviors.disable('scrollZoom');
+    //
+    //                     var myPlacemark = new ymaps.Placemark(center, {
+    //                         balloonContent: 'улица Покровка, 48',
+    //                         hintContent: 'улица Покровка, 48'
+    //                     }, {
+    //                         iconLayout: 'default#image',
+    //                         iconImageHref: 'img/baloon.png',
+    //                         iconImageSize: [136, 165]
+    //                     });
+    //
+    //                     myMap.geoObjects.add(myPlacemark);
+    //                 }
+    //             }, 500);
+    //             return;
+    //         }
+    //     });
+    // }
+
+
 
 });

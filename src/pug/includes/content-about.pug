@@ -1,0 +1,36 @@
+.about-page
+    .breadcrumbs-block
+        .container
+            ul.breadcrumbs
+                li 
+                    a(href="/") Клубный дом
+                li
+                    a О проекте
+
+    .about-page__item
+        .about-page__column
+            h1.main-title О проекте
+            ul.about-page__tab-link
+                li
+                    a(href="#") Архитектура
+                li
+                    a(href="#") Расположение
+                li
+                    a(href="#") Планировки
+
+            .num-block 01
+            .building-img
+                img(src="img/build.jpg" alt="Клубный дом на Покровке")
+
+        .about-page__column
+            .about-page__tab-block
+                .arh-slider.swiper-container
+                    .swiper-wrapper
+                        .swiper-slide(style="background-image:url(img/back-about.jpg)")
+                        .swiper-slide(style="background-image:url(img/front-about.jpg)")
+                        .swiper-slide(style="background-image:url(img/back-about.jpg)")
+
+                    .swiper-pagination
+
+                    .swiper-button-next
+                    .swiper-button-prev

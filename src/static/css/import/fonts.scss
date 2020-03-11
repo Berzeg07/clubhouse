@@ -1,4 +1,13 @@
 @font-face {
+    font-family: "TTPhobos";
+    src: url("../fonts/TTPhobos-Regular/TTPhobos-Regular.eot");
+    src: local('☺'), url("../fonts/TTPhobos-Regular/TTPhobos-Regular.woff") format('woff'), url("../fonts/TTPhobos-Regular/TTPhobos-Regular.ttf") format('truetype');
+    font-display: swap;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: "GoudyTrajan-Bold";
     src: url("../fonts/GoudyTrajan-Bold/GoudyTrajan-Bold.eot");
     src: local('☺'), url("../fonts/GoudyTrajan-Bold/GoudyTrajan-Bold.woff") format('woff'), url("../fonts/GoudyTrajan-Bold/GoudyTrajan-Bold.ttf") format('truetype');
