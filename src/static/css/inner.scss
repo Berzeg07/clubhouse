@@ -640,7 +640,7 @@
 	
 	@media (min-width : 1280px) {
 		width: 690px;
-		height: 415px;
+		height: 425px;
 	}
 
 	@media (min-width : 1600px) {
@@ -741,15 +741,21 @@
 	line-height: 22px;
 	color: rgba(180, 133, 66, 0.7);
 	position: absolute;
-	top: 530px;
 	z-index: 2;
 	left: 0;
 
 	padding: 10px;
 
+	@media (max-width : 767px) {
+		top: 530px;
+	}
+
+	@media (min-width : 767px) and (max-width: 1179px){
+		top: 0;
+	}
+
 	@media (min-width : 768px) {
 		position: relative;
-		top: 0;
 		left: 0;
 	}
 
@@ -757,7 +763,6 @@
 		position: absolute;
 		bottom: 0;
 		left: 0;
-		top: unset;
 	}
 
 	@media (min-width : 1600px) {
