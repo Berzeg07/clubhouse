@@ -64,6 +64,11 @@
     font-size: 18px;
     background: #C4994C;
     border-radius: 4px;
+    transition: 0.5s;
+    &:hover{
+        box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.4);
+        background: #CBA053;
+    }
 }
 
 .main-text {
@@ -336,7 +341,7 @@
     .logo__article {
         li {
             &:first-child {
-                font-size: 15px;
+                font-size: 16px;
             }
 
             &:last-child {
@@ -427,6 +432,11 @@
     background-size: cover;
     color: #FFDAA2;
     padding: 43px 19px;
+    @media(max-width: 767px){
+        background: #665A48 url("../img/bg-footer-mob.png") no-repeat center;
+        background-size: cover;
+
+    }
     @media(min-width: 1600px) {
         padding: 43px 100px;
     }
