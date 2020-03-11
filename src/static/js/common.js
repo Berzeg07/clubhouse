@@ -179,27 +179,16 @@ $(document).ready(function() {
 
     $('.js-modal').click(function(e) {
         e.preventDefault();
-
         $('.apartament-modal').fadeIn();
-        if ($(window).width() < 1280) {
-            $('body').css({
-                'overflow': 'hidden'
-            });
-            $('.overlay').css('display', 'block');
-        }
+        $('.js-modal').css('display', 'none');
     });
 
     $(".apartament-modal .phone").mask("+7(999)999-99-99");
 
-    $('.js-modal-close').click(function() {
+    $('.js-modal-close').click(function(e) {
+        e.preventDefault();
         $('.apartament-modal').fadeOut();
-
-        if ($(window).width() < 1280) {
-            $('body').css({
-                'overflow': 'scroll'
-            });
-            $('.overlay').css('display', 'none');
-        }
+        $('.js-modal').css('display', 'block');
     });
 
     $('.js-tabs a').click(function(e) {

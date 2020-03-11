@@ -484,6 +484,10 @@
 
 	text-align: center;
 
+	@media (min-width : 576px) {
+		padding-top: 70px;
+	}
+
 	@media (min-width : 768px) {
 		padding-top: 20px;
 		padding-left: 20px;
@@ -492,6 +496,7 @@
 	@media (min-width : 1280px) {
 		width: 320px;
 		padding-top: 60px;
+		text-align: left;
 	}
 
 	@media (min-width : 1600px) {
@@ -586,6 +591,14 @@
 	@media (max-width : 1599px) {
 		* {
 			font-size: 16px;
+
+			h2, h3 {
+				font-size: 22px;
+			}
+
+			div.apartaments__schemes div.info-data {
+				font-size: 20px;
+			}
 		}
 	}
 }
@@ -648,7 +661,8 @@
 }
 
 .apartaments__schemes .tab-slider__btn {
-	max-width: 250px;
+	max-width: 270px;
+	width: 100%;
 	margin: 0 auto;
 	display: flex;
 	justify-content: center;
@@ -721,23 +735,15 @@
 	line-height: 22px;
 	color: rgba(180, 133, 66, 0.7);
 	position: absolute;
-	bottom: 280px;
+	top: 530px;
 	z-index: 2;
 	left: 0;
 
 	padding: 10px;
 
-	@media (min-width : 515px) {
-		bottom: 303px;
-	}
-
-	@media (min-width : 576px) {
-		bottom: 215px;
-	}
-
 	@media (min-width : 768px) {
 		position: relative;
-		bottom: 0;
+		top: 0;
 		left: 0;
 	}
 
@@ -745,6 +751,7 @@
 		position: absolute;
 		bottom: 0;
 		left: 0;
+		top: unset;
 	}
 
 	@media (min-width : 1600px) {
@@ -766,6 +773,13 @@
 }
 
 .apartament-modal {
+	position: relative;
+	display: none;
+
+	h3 {
+		font-size: 18px;
+	}
+
 	@media (min-width : 1280px) {
 		position: absolute;
 		top: 0;
@@ -774,20 +788,16 @@
 		z-index: 0;
 	}
 
-	position: fixed;
-	transform: translate(-50%, -50%);
-	z-index: 999;
-	top: 50%;
-	left: 50%;
-	display: none;
 	background-color: #FFE0B1;
 
 	max-width: 450px;
 	width: 100%;
-	padding: 38px 33px 24px;
+	margin: 0 auto;
+	margin-top: 20px;
 
 	@media (min-width : 1280px) {
 		padding: 10px 15px;	
+		padding-top: 0;
 	}
 
 	@media (min-width : 1920px) {
@@ -867,10 +877,15 @@
 	font-size: 16px;
 	line-height: 20px;
 	color: #B48542;
+	text-align: left;
+	@media (min-width : 576px) {
+		text-align: center;	
+	}
 
 	@media (min-width : 1280px) {
 		font-size: 13px	!important;
 		line-height: 16px;
+		text-align: left;
 	}
 
 	@media (min-width : 1920px) {
@@ -948,8 +963,8 @@
 	background-image: url("../img/close-icon.png");
 
 	position: absolute;
-	top: 33px;
-	right: 27px;
+	top: 0px;
+	right: 0px;
 
 	cursor: pointer;
 	width: 24px;
