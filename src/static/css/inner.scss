@@ -376,12 +376,12 @@
 
 .apartaments__schemes-tabs {
 	display: flex;
-	flex-direction: column;
+	margin-left: -19px;
 
 	@media (min-width : 576px) {
 		flex-direction: row;
 		flex-direction: row;
-		margin-left: -30px;
+		
 	}
 	
 	margin-bottom: 20px;
@@ -404,24 +404,23 @@
 .apartaments__schemes-tabs li{
 	display: flex;
 	align-items: center;
-	margin-bottom: 20px;
+	margin-left: 19px;
+	order: 0;
 
 	&:last-child {
 		margin-bottom: 0;
+		order: -1;
 	}
-
-	@media (min-width : 576px) {
-		
-		margin-left: 30px;
-		margin-bottom: 0;
-	}
-
-
 
 	@media (min-width : 1280px) {
 		margin-bottom: 30px;
 
 		margin-left: 0px;	
+
+		&:last-child {
+			margin-bottom: 0;
+			order: 0;
+		}
 	}
 	
 	@media (min-width : 1980px) {
@@ -436,11 +435,11 @@
 
 .apartaments__schemes .tab-slider__column:nth-of-type(1) {
 	background-color: #FFEFCF;
-	position: relative;
 	padding: 20px;
 
 	@media (min-width : 1280px) {
 		width: 320px;
+		position: relative;
 	}
 
 	@media (min-width : 1600px) {
@@ -452,7 +451,7 @@
 		width: 463px;
 		max-width: 100%;
 
-		padding-top: 47px;
+		padding-top: 91px;
 		padding-right: 30px;
 		padding-left: 134px;
 
@@ -481,6 +480,9 @@
 .apartaments__schemes .tab-slider__column:nth-of-type(3) {
 	background: #FFE0B1;
 	padding: 20px;
+	padding-top: 100px;
+
+	text-align: center;
 
 	@media (min-width : 768px) {
 		padding-top: 20px;
@@ -534,12 +536,17 @@
 }
 .apartaments__schemes-title {
 	margin-bottom: 30px;
+	text-align: center;
+
+	@media (min-width : 576px) {
+		text-align: left;
+	}
 }
 
 .apartaments__schemes-tabs__btn {
 	width: 40px;
 	height: 40px;
-	margin-right: 25px;
+	margin-right: 6px;
 
 	background-color: #fff;
 	border: 2px solid #B48542;
@@ -586,6 +593,8 @@
 .apartaments .plan-slider-wrap {
 	width: 100%;
 	margin: 0 auto;
+
+	position: relative;
 
 	@media (min-width : 768px) {
 		max-width: 800px;
@@ -643,6 +652,11 @@
 	margin: 0 auto;
 	display: flex;
 	justify-content: center;
+	margin-top: 14px;
+
+	@media (min-width : 576px) {
+		margin-top: 0;
+	}
 
 	@media (min-width : 1280px) {
 		width: 250px;
@@ -706,8 +720,26 @@
 	font-size: 14px;
 	line-height: 22px;
 	color: rgba(180, 133, 66, 0.7);
+	position: absolute;
+	bottom: 280px;
+	z-index: 2;
+	left: 0;
 
 	padding: 10px;
+
+	@media (min-width : 515px) {
+		bottom: 303px;
+	}
+
+	@media (min-width : 576px) {
+		bottom: 215px;
+	}
+
+	@media (min-width : 768px) {
+		position: relative;
+		bottom: 0;
+		left: 0;
+	}
 
 	@media (min-width : 1280px) {
 		position: absolute;
