@@ -156,7 +156,7 @@ $(document).ready(function() {
         $('.js-modal').css('display', 'none');
     });
 
-    $(".apartament-modal .phone, .inp_phone").mask("+7(999)999-99-99");
+    $(".apartament-modal .phone, .inp_phone, .mortgage-form .phone").mask("+7(999)999-99-99");
 
     $('.js-modal-close').click(function(e) {
         e.preventDefault();
@@ -310,6 +310,34 @@ $(document).ready(function() {
     //         }
     //     });
     // }
+
+    var scrollSliser = undefined;
+
+    function initAction(){
+        var screenWidth = $(window).width();
+        if(screenWidth > 1279 && scrollSliser == undefined){
+            var scrollSliser = new Swiper('.scrollbar-slider', {
+              direction: 'vertical',
+              slidesPerView: 'auto',
+              freeMode: true,
+              scrollbar: {
+                el: '.swiper-scrollbar',
+              },
+              mousewheel: true,
+            });
+        }else if (screenWidth < 1280 && scrollSliser != undefined){
+            scrollSliser.destroy();
+            scrollSliser = undefined;
+            $('.scrollbar-slider__wrapper').removeAttr('style');
+            $('.scrollbar-slider__slide').removeAttr('style');
+        }
+    }
+
+    initAction();
+
+    $(window).on('resize', function(){
+        initAction();
+    });
 
 
 

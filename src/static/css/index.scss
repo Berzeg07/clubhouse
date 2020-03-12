@@ -2473,7 +2473,7 @@
     }
 }
 
-.contacts{
+.contacts {
     margin-bottom: 40px;
 }
 
@@ -2487,10 +2487,12 @@
         position: absolute;
         left: 0;
         z-index: 10;
-        &_top{
+
+        &_top {
             top: 0;
         }
-        &_bottom{
+
+        &_bottom {
             bottom: 0;
             padding-top: 5px;
         }
@@ -2598,17 +2600,178 @@
 
 .contacts__map {
     height: 494px;
-    @media(min-width: 992px){
+    @media(min-width: 992px) {
         height: 879px;
     }
 }
 
-.contacts__inner{
+.contacts__inner {
     position: relative;
-    @media(min-width: 992px){
+    @media(min-width: 992px) {
         margin-top: 20px;
-        .main-title{
+
+        .main-title {
             display: none;
+        }
+    }
+}
+
+.mortgage-form {
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto 25px;
+    padding: 48px 65px;
+    background: #FFEFCF;
+    box-shadow: -10px 10px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
+    .main-title {
+        margin-bottom: 24px;
+    }
+    @media(max-width: 991px) {
+        padding: 29px 18px;
+    }
+
+    input {
+        width: 100%;
+    }
+}
+
+.mortgage-form__btn {
+    width: 100%;
+    height: 76px;
+}
+
+.mortgage {
+    background: url("../img/ip-bg.jpg") no-repeat center;
+    background-size: cover;
+    padding-bottom: 50px;
+    @media(min-width: 1280px) {
+        padding-bottom: 100px;
+    }
+}
+
+.mortgage__title {
+    font-size: 38px;
+    font-weight: 500;
+    color: #B48542;
+    margin-bottom: 25px;
+    padding-top: 10px;
+    @media(min-width: 768px) {
+        text-align: center;
+    }
+}
+
+.mortgage-info {
+    color: #B48542;
+
+    li {
+        background: #FFFFFF;
+        border-radius: 4px;
+        padding: 18px 16px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 25px;
+        @media(min-width: 1280px){
+            padding: 22px 16px;
+        }
+
+        .mortgage-info__item {
+            text-align: center;
+            @media(max-width: 991px) {
+                margin-bottom: 14px;
+            }
+
+            span {
+                display: block;
+                font-size: 18px;
+                font-weight: 500;
+                @media(max-width: 991px) {
+                    font-size: 14px;
+                }
+            }
+
+            b {
+                font-size: 28px;
+                font-weight: 700;
+            }
+
+            &:first-child {
+                width: 100px;
+                text-align: center;
+            }
+
+            &:not(:last-child) {
+                @media(max-width: 699px) {
+                    width: 50%;
+                }
+                @media(min-width: 700px) and (max-width: 991px) {
+                    width: 25%;
+                }
+                @media(min-width: 992px) and (max-width: 1279px) {
+                    width: 19%;
+                }
+            }
+
+            &:last-child {
+                width: 100%;
+                @media(min-width: 992px) {
+                    width: 23%;
+                }
+                @media(min-width: 1280px) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.scrollbar-slider {
+    width: 100%;
+    @media(min-width: 1280px) {
+        height: 640px;
+        padding-right: 30px;
+    }
+
+    .swiper-slide {
+        height: auto;
+    }
+
+    .swiper-scrollbar {
+        width: 18px;
+        border-radius: 0;
+        background: #D9D9D9;
+        opacity: 1;
+        right: 0;
+
+        .swiper-scrollbar-drag {
+            background: rgba(255, 218, 161, 0.78);
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 0;
+        }
+    }
+}
+
+.mortgage__inner {
+    display: flex;
+    flex-direction: column;
+    @media(min-width: 1280px) {
+        flex-direction: row;
+    }
+
+    .mortgage__column {
+        &:first-child {
+            @media(max-width: 1279px) {
+                order: 1;
+            }
+        }
+
+        &:last-child {
+            @media(min-width: 1280px) {
+                width: calc(100% - 450px);
+                padding-left: 24px;
+            }
         }
     }
 }
