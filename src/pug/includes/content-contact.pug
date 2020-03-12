@@ -1,0 +1,38 @@
+.contacts
+    .breadcrumbs-block
+        .container
+            ul.breadcrumbs
+                li 
+                    a(href="/") Клубный дом
+                li
+                    a Контакты
+    .contacts__inner                
+        h1.main-title.main-title_inner Контакты
+        .contact-info.contact-info_top
+            p.form-title.form-title_bottom-border Контакты
+            .contact-info__item
+                ul.footer__info
+                    li
+                        span Адрес:
+                        .adress.footer__adress Москва, ул. Покровка, 48
+                    li
+                        span Телефон:
+                        a(href="tel:74950233880").phone-footer +7 (495) 023-38-80
+                    li
+                        span E-mail:
+                        a(href="mailto:info@buonapart.ru").email-footer info@buonapart.ru
+        
+        #mapMain.contacts__map
+        
+        .contact-info.contact-info_bottom        
+            p.form-title.form-title_top-border Обратная связь
+            form.recall-form.contact-info__item(action="#")
+                input(type="text" placeholder="Ваше имя").inp.inp_name
+                input(type="text" placeholder="Контактный телефон").inp.inp_phone
+                textarea(placeholder="Опишите ваш вопрос").textarea
+                button(type="submit").btn.recall-form__btn Отправить
+                .recall-form__person
+                    span Нажимая на кнопку я принимаю условия, даю согласие на 
+                        a(href="#") обработку персональных данных
+            
+        

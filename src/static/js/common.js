@@ -17,16 +17,11 @@ $(document).ready(function() {
 
     new WOW().init();
 
-
-    // $(".plan-btn:first").click();
-
     $('.burger').click(function() {
         $(this).toggleClass('is-active');
         $('.dropdown-menu').toggleClass('is-active');
         $('body').toggleClass('overflow-hidden');
     });
-
-
 
     var tabSlider = new Swiper('.tab-slider', {
         simulateTouch: false,
@@ -84,39 +79,17 @@ $(document).ready(function() {
         },
     });
 
-    // var layoutSlider = new Swiper('.layout-slider', {
-    //     spaceBetween: 0,
-    //     effect: 'fade',
-    //     loop: 'true',
-    //     pagination: {
-    //         el: '.swiper-pagination',
-    //         clickable: true
-    //     },
-    //     navigation: {
-    //         nextEl: '.swiper-button-next',
-    //         prevEl: '.swiper-button-prev',
-    //     },
-    // });
-
-    // var allSliders = document.querySelectorAll('.plan-slider');
-
     $(".plan-btn").click(function(e) {
         e.preventDefault();
         var $this = $(this);
 
-
         if (!$this.hasClass("active")) {
-            // $(".plan-mob__item").slideUp();
             $(".plan-mob__item").removeClass('active');
-
             $(".plan-btn").removeClass("active");
         }
 
         $this.toggleClass("active");
-        // $this.next().slideToggle();
         $this.next().addClass('active');
-
-
     });
 
     $('#tabsLink a').click(function(e) {
@@ -183,7 +156,7 @@ $(document).ready(function() {
         $('.js-modal').css('display', 'none');
     });
 
-    $(".apartament-modal .phone").mask("+7(999)999-99-99");
+    $(".apartament-modal .phone, .inp_phone").mask("+7(999)999-99-99");
 
     $('.js-modal-close').click(function(e) {
         e.preventDefault();
@@ -198,23 +171,6 @@ $(document).ready(function() {
         });
         $(this).addClass('active');
     });
-
-    // $(function() {
-    //     $(window).scroll(function() {
-    //         if ($(this).scrollTop() >= 96) {
-    //             $('.header__bottom').addClass('stickytop');
-    //             $('.header').addClass('header-height-fixed');
-    //             $('.header__logo, .phone-header').addClass('sticky-el');
-    //
-    //         }else{
-    //             $('.header__bottom').removeClass('stickytop');
-    //             $('.header').removeClass('header-height-fixed');
-    //             $('.header__logo, .phone-header').removeClass('sticky-el');
-    //
-    //         }
-    //         console.log($(this).scrollTop());
-    //     });
-    // });
 
     function stickyTop() {
         $(window).scroll(function() {
@@ -233,8 +189,6 @@ $(document).ready(function() {
     }
 
     stickyTop();
-
-    // function layoutSliderInit() {
     var layoutSlider = new Swiper('.layout-slider', {
         spaceBetween: 0,
         effect: 'fade',
@@ -248,11 +202,7 @@ $(document).ready(function() {
             prevEl: '.swiper-button-prev',
         },
     });
-    // }
-    // layoutSliderInit();
 
-
-    // layoutSlider.destroy();
     var layoutSlider = new Swiper('.layout-slider', {
         spaceBetween: 0,
         effect: 'fade',
