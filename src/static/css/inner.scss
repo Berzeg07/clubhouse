@@ -564,7 +564,7 @@
 	}
 	@media (min-width : 1600px) {
 		max-width: 1090px;
-		height: auto;
+		height: 600px;
 		width: 100%;
 	}
 	@media (min-width : 1920px) {
@@ -900,9 +900,7 @@
 		max-width: 350px;
 	}
 	@media(min-width: 1600px){
-		max-width: 450px;
-	}
-	@media(min-width: 1900px){
 		max-width: 100%;
 	}
+
 }
