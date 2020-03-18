@@ -21,46 +21,74 @@
 
                             ul.apartaments__schemes-tabs
                                 li
-                                    a(href="#").apartaments__schemes-tabs__btn 2
+                                    a(href=".tab1").apartaments__schemes-tabs__btn 2
                                     div
                                         .info-about Площадь:
                                         .info-data 44,6
                                             span м
                                             sup 2
                                 li
-                                    a(href="#").apartaments__schemes-tabs__btn.active 1
+                                    a(href=".tab2").apartaments__schemes-tabs__btn.active 1
                                     div
                                         .info-about Площадь:
                                         .info-data 18,2
                                             span м
                                             sup 2
-                            p.description На первом уровне площадью 36,9 м2 могут разместиться пространства для общения и приема гостей, кухня и технические помещения
+                            p.description.ap-tabs.tab1 На первом уровне площадью 36,9 м2 могут разместиться пространства для общения и приема гостей, кухня и технические помещения
+                            p.description.ap-tabs.tab2 На втором уровне уровне площадью 36,9 м2 могут разместиться пространства для общения и приема гостей, кухня и технические помещения
 
                         .tab-slider__column
-                            .plan-slider.swiper-container
-                                .swiper-wrapper
-                                    .swiper-slide
-                                        .plan-slider__img
-                                            img(src="img/ap-plan-6.png")
-                                        div.compass
-                                        button(aria-label="Сердце").heart
-                                        button(aria-label="Распечатать" onClick="window.print()").print
-                                    .swiper-slide
-                                        .plan-slider__img
-                                            img(src="img/ap-plan-5.png")
-                                        div.compass
-                                        button(aria-label="Сердце").heart
-                                        button(aria-label="Распечатать" onClick="window.print()").print 
-                                    .swiper-slide
-                                        .plan-slider__img
-                                            img(src="img/ap-plan-7.png")
-                                        div.compass
-                                        button(aria-label="Сердце").heart
-                                        button(aria-label="Распечатать" onClick="window.print()").print
+                            .ap-tabs.tab1
+                                .plan-slider.swiper-container
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            .plan-slider__img
+                                                img(src="img/a1.png")
+                                            div.compass
+                                            button(aria-label="Сердце").heart
+                                            button(aria-label="Распечатать" onClick="window.print()").print
+                                        .swiper-slide
+                                            .plan-slider__img
+                                                img(src="img/a2.png")
+                                            div.compass
+                                            button(aria-label="Сердце").heart
+                                            button(aria-label="Распечатать" onClick="window.print()").print 
+                                        .swiper-slide
+                                            .plan-slider__img
+                                                img(src="img/a1.png")
+                                            div.compass
+                                            button(aria-label="Сердце").heart
+                                            button(aria-label="Распечатать" onClick="window.print()").print
 
-                                .swiper-pagination 
-                                .swiper-button-next
-                                .swiper-button-prev
+                                    .swiper-pagination 
+                                    .swiper-button-next
+                                    .swiper-button-prev
+                                        
+                            .ap-tabs.tab2
+                                .plan-slider.swiper-container
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            .plan-slider__img
+                                                img(src="img/a2.png")
+                                            div.compass
+                                            button(aria-label="Сердце").heart
+                                            button(aria-label="Распечатать" onClick="window.print()").print
+                                        .swiper-slide
+                                            .plan-slider__img
+                                                img(src="img/a1.png")
+                                            div.compass
+                                            button(aria-label="Сердце").heart
+                                            button(aria-label="Распечатать" onClick="window.print()").print 
+                                        .swiper-slide
+                                            .plan-slider__img
+                                                img(src="img/a2.png")
+                                            div.compass
+                                            button(aria-label="Сердце").heart
+                                            button(aria-label="Распечатать" onClick="window.print()").print
+
+                                    .swiper-pagination 
+                                    .swiper-button-next
+                                    .swiper-button-prev
 
                         .tab-slider__column
                             .tab-slider__article
