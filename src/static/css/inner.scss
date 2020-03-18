@@ -556,20 +556,18 @@
 .apartaments__schemes .plan-slider {
 	width: 100%;
 	@media (min-width : 768px) {
-		height: 330px;
+		height: 600px;
 	}
 	@media (min-width : 1280px) {
 		width: 690px;
-		height: 425px;
+		height: 600px;
 	}
 	@media (min-width : 1600px) {
 		max-width: 1090px;
-		height: 600px;
 		width: 100%;
 	}
 	@media (min-width : 1920px) {
 		width: 945px;
-		height: 600px;
 	}
 }
 
@@ -896,9 +894,16 @@
 }
 
 .apartaments__schemes .plan-slider__img {
+	max-width: 400px;
+
 	@media(min-width: 768px){
-		max-width: 350px;
+		max-width: 600px;
 	}
+
+	@media (min-width : 1280px) {
+		max-width: 570px;
+	}
+
 	@media(min-width: 1600px){
 		max-width: 100%;
 	}
