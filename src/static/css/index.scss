@@ -1095,7 +1095,7 @@
     font-size: 20px;
     color: #CBA064;
     font-weight: 500;
-    @media(min-width: 1366px) and (max-width: 1599px){
+    @media(min-width: 1366px) and (max-width: 1599px) {
         font-size: 17px;
     }
 }
@@ -1127,7 +1127,7 @@
     text-align: center;
     font-size: 22px;
     width: 219px;
-    padding: 15px 0px;
+    padding: 15px 0;
 }
 
 .tab-slider__quote {
@@ -1139,14 +1139,14 @@
     border-left: 3px solid #E7C597;
     font-size: 19px;
     color: #999999;
-    @media(max-width: 1365px){
+    @media(max-width: 1365px) {
         background: white;
     }
-    @media(min-width: 1366px) and (max-width: 1599px){
+    @media(min-width: 1366px) and (max-width: 1599px) {
         margin-left: 40px;
         padding-left: 20px;
     }
-    @media(min-width: 1600px) and (max-width: 1799px){
+    @media(min-width: 1600px) and (max-width: 1799px) {
         margin-left: 100px;
     }
 
@@ -1158,7 +1158,7 @@
         width: 21px;
         height: 18px;
         background: url("../img/quote.png") no-repeat center;
-        @media(min-width: 1366px) and (max-width: 1599px){
+        @media(min-width: 1366px) and (max-width: 1599px) {
             left: -36px;
         }
     }
@@ -1169,7 +1169,7 @@
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 30px;
-    @media(min-width: 1366px) and (max-width: 1599px){
+    @media(min-width: 1366px) and (max-width: 1599px) {
         font-size: 24px;
     }
 }
@@ -1196,7 +1196,7 @@
     padding-bottom: 84px;
     max-width: 1600px;
     width: 100%;
-    @media(min-width: 1800px){
+    @media(min-width: 1800px) {
         max-width: 1700px;
     }
 
@@ -1222,7 +1222,7 @@
     .swiper-button-next_main {
         background: url("../img/next.png") no-repeat center;
         top: 53.5%;
-        right: 0px;
+        right: 0;
         opacity: 1;
         @media(max-width: 1799px) {
             right: 10px;
@@ -1232,7 +1232,7 @@
     .swiper-button-prev_main {
         background: url("../img/arrow-left.png") no-repeat center;
         top: 53.5%;
-        left: 0px;
+        left: 0;
         opacity: 1;
         @media(max-width: 1799px) {
             left: 10px;
@@ -1240,41 +1240,46 @@
     }
 }
 
-.tab-slider__block {
-    max-width: 693px;
-    width: 100%;
-    margin: 0 auto;
-    box-shadow: -10px 10px 40px rgba(0, 0, 0, 0.15);
-    @media(min-width: 1366px) and (max-width: 1599px){
-        max-width: 599px;
-    }
-    .tab-slider__column{
-        @media(min-width: 992px) {
-            width: 50%;
+.tab-cont {
+    .tab-slider__block {
+        max-width: 693px;
+        width: 100%;
+        margin: 0 auto;
+        box-shadow: -10px 10px 40px rgba(0, 0, 0, 0.15);
+        @media(min-width: 1366px) and (max-width: 1599px) {
+            max-width: 599px;
         }
-        &:first-child{
-            background: #FFEFCF;
+
+        .tab-slider__column {
             @media(min-width: 992px) {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                width: 50%;
+            }
+
+            &:first-child {
+                background: #FFEFCF;
+                @media(min-width: 992px) {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            &:last-child {
+                background: #FFE0B2;
+                padding: 38px 47px;
+                @media(min-width: 1366px) and (max-width: 1599px) {
+                    padding: 20px 33px;
+                }
             }
         }
-        &:last-child{
-            background: #FFE0B2;
-            padding: 38px 47px;
-            @media(min-width: 1366px) and (max-width: 1599px){
-                padding: 20px 33px;
-            }
+        @media(min-width: 992px) {
+            display: flex;
+            justify-content: center;
         }
-    }
-    @media(min-width: 992px) {
-        display: flex;
-        justify-content: center;
     }
 }
 
-.plan-image{
+.plan-image {
     max-width: 287px;
     width: 100%;
     text-align: center;
