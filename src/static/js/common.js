@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+    $(function($) {
+        $('tbody tr[data-href]').addClass('clickable').click(function() {
+            window.location = $(this).attr('data-href');
+        });
+    });
+
     $('.flat-info__btn').click(function() {
         var $this = $(this);
         $('.flat-info__front, .flat-info__back').removeAttr('style');
@@ -121,6 +127,29 @@ $(document).ready(function() {
         $(tab).fadeIn(400);
     });
     $('#tabsLink a:first').click();
+
+    $('#tabsAbout a').click(function(e) {
+        e.preventDefault();
+        $('#tabsAbout a').removeClass('is-active');
+        $(this).addClass('is-active');
+        var tab = $(this).attr('href');
+        $('.about-page__tab-block').not(tab).removeClass('show');
+        $(tab).addClass('show');
+    });
+    if (window.matchMedia("(min-width: 992px)").matches) {
+        $('#tabsAbout a:first').click();
+    }
+
+    // $('#tabsAbout a').click(function(e) {
+    //     e.preventDefault();
+    //     $('#tabsAbout a').removeClass('is-active');
+    //     $(this).addClass('is-active');
+    //     var tab = $(this).attr('href');
+    //     $('.about-page__tab-block').not(tab).css({
+    //         'display': 'none'
+    //     });
+    //     $(tab).fadeIn(400);
+    // });
 
     // $('.js-tabs a').click(function(e) {
     //     e.preventDefault();
@@ -250,18 +279,6 @@ $(document).ready(function() {
         },
     });
 
-    $('.about-page__tab-link a').click(function(e) {
-        e.preventDefault();
-        $('.about-page__tab-link a').removeClass('is-active');
-        $(this).addClass('is-active');
-        var tab = $(this).attr('href');
-        $('.about-page__tab-block').not(tab).removeClass('show');
-        $(tab).addClass('show');
-    });
-    if (window.matchMedia("(min-width: 1280px)").matches) {
-        $('.about-page__tab-link a:first').click();
-    }
-
     $(window).resize(function() {
         if (window.matchMedia("(min-width: 1280px)").matches) {
             $('.about-page__tab-link a:first').click();
@@ -276,7 +293,7 @@ $(document).ready(function() {
 
         function init() {
 
-            var center = [55.763290, 37.654817];
+            var center = [55.763240, 37.651825];
             var myMap = new ymaps.Map('mapMain', {
                 center: center,
                 controls: [],
@@ -288,8 +305,8 @@ $(document).ready(function() {
             myMap.behaviors.disable('scrollZoom');
 
             var myPlacemark = new ymaps.Placemark(center, {
-                balloonContent: 'улица Покровка, 48',
-                hintContent: 'улица Покровка, 48'
+                balloonContent: 'Москва, ул. Покровка, 43, стр 8',
+                hintContent: 'Москва, ул. Покровка, 43, стр 8'
             }, {
                 iconLayout: 'default#image',
                 iconImageHref: 'img/baloon.png',

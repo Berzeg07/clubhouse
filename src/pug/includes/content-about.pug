@@ -6,115 +6,90 @@
                     a(href="/") Клубный дом
                 li
                     a О проекте
+                    
+    .plan-tabs.plan-tabs_about
+        .plan-tabs__inner
+            .container.plan-tabs__links#tabsAbout
+                a(href="#tabFirst").plan-tabs__btn.plan-tabs__btn_about.is-active Архитектура 
+                a(href="#tabSecond").plan-tabs__btn.plan-tabs__btn_about Расположение
+                a(href="#tabThird").plan-tabs__btn.plan-tabs__btn_about Планировки 
+    
+    .about-page__box
+        .about-page__tab-block#tabFirst
+            .mob-title
+                span Архитектура
+                
+            .main-text.container.main-text_inner
+                p Клубный дом на Покровке – это уникальный исторический особняк второй середины IXX века, состоящий из нескольких разноуровневых городских апартаментов. Клубный дом на Покровке обладает своим неповторимым шармом и уникальным архитектурным обликом, вписывающимся в окружающую среду исторической Москвы
+                 
+            .arh-slider.swiper-container
+                .swiper-wrapper
+                    .swiper-slide(style="background-image:url(img/back-about.jpg)")
+                    .swiper-slide(style="background-image:url(img/front-about.jpg)")
+                    .swiper-slide(style="background-image:url(img/back-about.jpg)")
 
-    .about-page__item
-        .about-page__column
-            h1.main-title.main-title_inner О проекте
-            ul.about-page__tab-link
+                .swiper-pagination
+
+                .swiper-button-next
+                .swiper-button-prev
+
+        .about-page__tab-block#tabSecond
+            .mob-title
+                span Расположение
+                
+            .main-text.container.main-text_inner
+                p Клубный дом на Покровке расположен в тихом московском дворе между улицами Покровка и Машкова, в 250 м. от Садового кольца и 440 м. от Чистопрудного бульвара. В пешей доступности находятся несколько городских парков, достопримечательностей и общественных пространств, а также множество объектов инфраструктуры
+            
+            ul.block-about.container
                 li
-                    a(href="#tabFirst").is-active Архитектура
+                    span От Садового кольца -250 м
+                li    
+                    span От Чистопрудного бульвара - 440 м
+                
+            .arh-slider.swiper-container.local-slider
+                ul.local-slider__article
+                    li
+                        span от Чистопрудного бульвара
+                    li
+                        span 440 
+                            b м.
+                .swiper-wrapper
+                    .swiper-slide(style="background-image:url(img/cont-1.jpg)")
+                    .swiper-slide(style="background-image:url(img/cont-2.jpg)")
+                    .swiper-slide(style="background-image:url(img/cont-1.jpg)")
+
+                .swiper-pagination
+
+                .swiper-button-next
+                .swiper-button-prev
+
+            #mapMain.about-map
+        
+        .about-page__tab-block#tabThird
+            .mob-title
+                span Планировки
+                
+            .main-text.container.main-text_inner
+                p Второй уровень станет местом для личных апартаментов хозяев, отдыха у камина и работы В апартаментах могут разместиться пространства для общения и приема гостей, кухня и технические помещения
+                
+            ul.block-about.block-about_plan.container
                 li
-                    a(href="#tabSecond") Расположение
+                    span Общая площадь здания - 501,5 м
+                        sup 2
+                li    
+                    span 16 апартаментов - от 18,8 до 79,30 м
+                        sup 2
                 li
-                    a(href="#tabThird") Планировки
+                    span Высота потолков - от 2,53 до 4,24 м      
+                
+            .arh-slider.swiper-container
+                a(href="#").btn.arh-slider__btn Выбрать апартаменты
+                .swiper-wrapper
+                    .swiper-slide(style="background-image:url(img/pl-1.jpg)")
+                    .swiper-slide(style="background-image:url(img/pl-2.jpg)")
+                    .swiper-slide(style="background-image:url(img/pl-1.jpg)")
 
-        .about-page__column
-            .about-page__tab-block#tabFirst
-                .num-block 01
-                .building-img
-                    img(src="img/build.jpg" alt="Клубный дом на Покровке")
-                .info-block
-                    .info-block__inner
-                        .info-block__title
-                            span Архитектура
+                .swiper-pagination
 
-                        .info-block__article
-                            p Клубный дом на Покровке – это уникальный исторический особняк второй середины IXX века, состоящий из нескольких разноуровневых городских апартаментов.
-                            p Клубный дом на Покровке обладает своим неповторимым шармом и уникальным архитектурным обликом, вписывающимся в окружающую среду исторической Москвы
-
-
-                .arh-slider.swiper-container
-                    .swiper-wrapper
-                        .swiper-slide(style="background-image:url(img/back-about.jpg)")
-                        .swiper-slide(style="background-image:url(img/front-about.jpg)")
-                        .swiper-slide(style="background-image:url(img/back-about.jpg)")
-
-                    .swiper-pagination
-
-                    .swiper-button-next
-                    .swiper-button-prev
-
-            .about-page__tab-block#tabSecond
-                .num-block 02
-                .info-block
-                    .info-block__inner
-                        .info-block__title
-                            span Расположение
-
-                        .info-block__article
-                            p Клубный дом на Покровке расположен в тихом московском дворе между улицами Покровка и Машкова, в 250 м. от Садового кольца и 440 м. от Чистопрудного бульвара
-                            p В пешей доступности находятся несколько городских парков, достопримечательностей и общественных пространств, а также множество объектов инфраструктуры
-                            p От Садового кольца - 
-                                b 250 
-                                span м
-                            p От Чистопрудного бульвара - 
-                                b 440 
-                                span м
-                .building-img
-                    img(src="img/cont-1.jpg" alt="Клубный дом на Покровке")
-                .arh-slider.swiper-container.local-slider
-                    .swiper-wrapper
-                        .swiper-slide(style="background-image:url(img/cont-1.jpg)")
-                        .swiper-slide(style="background-image:url(img/cont-2.jpg)")
-                        .swiper-slide(style="background-image:url(img/cont-1.jpg)")
-
-                    .swiper-pagination
-
-                    .swiper-button-next
-                    .swiper-button-prev
-
-                #mapMain.about-map
-            .about-page__tab-block#tabThird
-                .num-block 03
-                .building-img
-                    img(src="img/plan-img.jpg" alt="Клубный дом на Покровке")
-                .info-block
-                    .info-block__inner
-                        .info-block__title
-                            span Планировки
-
-                        .info-block__article
-                            p Второй уровень станет местом для личных апартаментов хозяев, отдыха у камина и работы
-                            p В апартаментах могут разместиться пространства для общения и приема гостей, кухня и технические помещения
-                            ul.info-block__list
-                                li Общая площадь здания - 
-                                    b 501,5
-                                    span 
-                                        |м
-                                        sup 2
-                                li 12 апартаментов -  
-                                    span от 
-                                    b 18,8 
-                                    span до 
-                                    b 149,80
-                                    span 
-                                        |м
-                                        sup 2
-                                li Высота потолков - 
-                                    span от 
-                                    b 2,53 
-                                    span до 
-                                    b 4,24 
-                                    span м
-
-                .arh-slider.swiper-container
-                    a(href="#").btn.arh-slider__btn Выбрать апартаменты
-                    .swiper-wrapper
-                        .swiper-slide(style="background-image:url(img/pl-1.jpg)")
-                        .swiper-slide(style="background-image:url(img/pl-2.jpg)")
-                        .swiper-slide(style="background-image:url(img/pl-1.jpg)")
-
-                    .swiper-pagination
-
-                    .swiper-button-next
-                    .swiper-button-prev
+                .swiper-button-next
+                .swiper-button-prev
