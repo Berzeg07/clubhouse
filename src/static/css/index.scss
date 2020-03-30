@@ -1124,10 +1124,16 @@
     width: auto;
     margin-bottom: 15px;
     height: auto;
-    padding: 40px 0 30px;
+    padding: 40px 0 60px;
+    margin-top: -30px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
 
     .plan-slider__img {
-        width: 195px;
+        width: 220px;
+        margin: 0 auto 20px;
     }
 
     .swiper-button-prev {
@@ -1137,9 +1143,23 @@
     .swiper-button-next {
         right: 0;
     }
+    .swiper-slide {
+        display: block;
+        text-align: center;
+    }
+    .swiper-pagination{
+        bottom: 25px;
+    }
+}
+
+.plan-slider_mob.active {
+    visibility: visible;
+    height: auto;
+    opacity: 1;
 }
 
 .plan-mob__list {
+    text-align: center;
     .info-about {
         font-size: 18px;
         margin-right: 9px;
@@ -1253,6 +1273,9 @@
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 30px;
+    @media(max-width: 991px){
+        margin-bottom: 10px;
+    }
     @media(min-width: 1366px) and (max-width: 1599px) {
         font-size: 24px;
     }
@@ -1397,25 +1420,18 @@
     padding: 55px 10px 26px;
     margin-top: -54px;
     margin-bottom: 40px;
-    visibility: hidden;
-    height: 0;
-    opacity: 0;
-    transition: 0.2s;
+
 
     .plan-slider {
         background: inherit;
     }
 }
 
-.plan-mob__item.active {
-    visibility: visible;
-    height: auto;
-    opacity: 1;
-}
+
 
 .plan-btn {
     width: 288px;
-    margin: 0 auto 25px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;

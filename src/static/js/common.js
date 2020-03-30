@@ -108,7 +108,7 @@ $(document).ready(function() {
         var $this = $(this);
 
         if (!$this.hasClass("active")) {
-            $(".plan-mob__item").removeClass('active');
+            $(".plan-slider_mob").removeClass('active');
             $(".plan-btn").removeClass("active");
         }
 
@@ -303,6 +303,8 @@ $(document).ready(function() {
             });
 
             myMap.behaviors.disable('scrollZoom');
+            // myMap.behaviors.disable('multiTouch');
+            myMap.behaviors.disable('drag')
 
             var myPlacemark = new ymaps.Placemark(center, {
                 balloonContent: 'Москва, ул. Покровка, 43, стр 8',
