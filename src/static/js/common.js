@@ -64,7 +64,7 @@ $(document).ready(function() {
 
     var mainSlider = new Swiper('.main-slider', {
         spaceBetween: 0,
-        effect: 'fade',
+        // effect: 'fade',
         loop: 'true',
         pagination: {
             el: '.swiper-pagination',
@@ -286,83 +286,87 @@ $(document).ready(function() {
     });
 
     var checkDiv = document.querySelector('#mapMain');
-
-    if (checkDiv != null) {
-
-        ymaps.ready(init);
-
-        function init() {
-
-            var center = [55.763240, 37.651825];
-            var myMap = new ymaps.Map('mapMain', {
-                center: center,
-                controls: [],
-                zoom: 16
-            }, {
-                searchControlProvider: 'yandex#search'
-            });
-
-            myMap.behaviors.disable('scrollZoom');
-            // myMap.behaviors.disable('multiTouch');
-            myMap.behaviors.disable('drag')
-
-            var myPlacemark = new ymaps.Placemark(center, {
-                balloonContent: 'Москва, ул. Покровка, 43, стр 8',
-                hintContent: 'Москва, ул. Покровка, 43, стр 8'
-            }, {
-                iconLayout: 'default#image',
-                iconImageHref: 'img/baloon.png',
-                iconImageSize: [136, 165]
-            });
-
-            myMap.geoObjects.add(myPlacemark);
-        }
-    }
-
-    // var checkDiv = document.querySelector('.table-block');
+    //
     // if (checkDiv != null) {
-    //     var show = $('.table-block');
-    //     var showTop = show.offset().top;
-    //     var newMap = document.querySelector('.new-map');
-    //     $(window).bind('scroll', function() {
-    //         var windowTop = $(this).scrollTop();
-    //         if (windowTop > showTop) {
-    //             // $(window).unbind('scroll');
     //
-    //             newMap.setAttribute("src", "https://api-maps.yandex.ru/2.1/?lang=ru_RU");
-    //             setTimeout(function() {
-    //                 ymaps.ready(init);
+    //     ymaps.ready(init);
+    //     // YMaps.load(init);
     //
-    //                 function init() {
+    //     function init() {
     //
-    //                     var center = [55.763290, 37.654817];
-    //                     var myMap = new ymaps.Map('mapMain', {
-    //                         center: center,
-    //                         controls: [],
-    //                         zoom: 16
-    //                     }, {
-    //                         searchControlProvider: 'yandex#search'
-    //                     });
+    //         var center = [55.763240, 37.651825];
+    //         var myMap = new ymaps.Map('mapMain', {
+    //             center: center,
+    //             controls: [],
+    //             zoom: 16
+    //         }, {
+    //             searchControlProvider: 'yandex#search'
+    //         });
     //
-    //                     myMap.behaviors.disable('scrollZoom');
+    //         myMap.behaviors.disable('scrollZoom');
+    //         // myMap.behaviors.disable('multiTouch');
+    //         myMap.behaviors.disable('drag')
     //
-    //                     var myPlacemark = new ymaps.Placemark(center, {
-    //                         balloonContent: 'улица Покровка, 48',
-    //                         hintContent: 'улица Покровка, 48'
-    //                     }, {
-    //                         iconLayout: 'default#image',
-    //                         iconImageHref: 'img/baloon.png',
-    //                         iconImageSize: [136, 165]
-    //                     });
+    //         var myPlacemark = new ymaps.Placemark(center, {
+    //             balloonContent: 'Москва, ул. Покровка, 43, стр 8',
+    //             hintContent: 'Москва, ул. Покровка, 43, стр 8'
+    //         }, {
+    //             iconLayout: 'default#image',
+    //             iconImageHref: 'img/baloon.png',
+    //             iconImageSize: [136, 165]
+    //         });
     //
-    //                     myMap.geoObjects.add(myPlacemark);
-    //                 }
-    //             }, 500);
-    //             return;
-    //         }
-    //     });
+    //         myMap.geoObjects.add(myPlacemark);
+    //     }
     // }
 
+    var YaMapsShown = false;
+    if (checkDiv != null) {
+
+        $(window).scroll(function() {
+            if (!YaMapsShown) {
+                if ($(window).scrollTop() + $(window).height() > $(document).height() - 700) {
+                    var elem = document.createElement('script');
+                    elem.type = 'text/javascript';
+                    elem.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
+                    // console.log(elem);
+                    $('body').append(elem);
+                    YaMapsShown = true;
+                    setTimeout(function() {
+                        ymaps.ready(init);
+
+                        function init() {
+
+                            var center = [55.763240, 37.651825];
+                            var myMap = new ymaps.Map('mapMain', {
+                                center: center,
+                                controls: [],
+                                zoom: 16
+                            }, {
+                                searchControlProvider: 'yandex#search'
+                            });
+
+                            myMap.behaviors.disable('scrollZoom');
+                            // myMap.behaviors.disable('multiTouch');
+                            myMap.behaviors.disable('drag')
+
+                            var myPlacemark = new ymaps.Placemark(center, {
+                                balloonContent: 'Москва, ул. Покровка, 43, стр 8',
+                                hintContent: 'Москва, ул. Покровка, 43, стр 8'
+                            }, {
+                                iconLayout: 'default#image',
+                                iconImageHref: 'img/baloon.png',
+                                iconImageSize: [136, 165]
+                            });
+
+                            myMap.geoObjects.add(myPlacemark);
+                        }
+                    }, 500);
+                }
+            }
+        });
+    }
+    
     var scrollSliser = undefined;
 
     function initAction() {

@@ -16,9 +16,23 @@
             button.btn.main-slider__btn(type="button") Выбрать апартаменты
 
     .swiper-wrapper
-        .swiper-slide(style="background-image:url(img/hotel.jpg)")
-        .swiper-slide(style="background-image:url(img/plan-back.jpg)")
-        .swiper-slide(style="background-image:url(img/plan-front.jpg)")
+        .swiper-slide
+            <picture>
+              <source srcset="img/hotel-320.jpg" media="(max-width: 499px)">
+              <source srcset="img/hotel-500.jpg" media="(max-width: 767px)">
+              <source srcset="img/hotel-768.jpg" media="(max-width: 991px)">
+              <img src="img/hotel.jpg">
+            </picture>
+        .swiper-slide
+            img(src="img/plan-back.jpg")
+        .swiper-slide
+            img(src="img/plan-front.jpg")
+        //- .swiper-slide(style="background-image:url(img/hotel.jpg)")
+        //-     img(src="img/hotel.jpg")
+        //- .swiper-slide(style="background-image:url(img/plan-back.jpg)")
+        //-     img(src="img/plan-back.jpg")
+        //- .swiper-slide(style="background-image:url(img/plan-front.jpg)")
+        //-     img(src="img/plan-front.jpg")
 
     .swiper-pagination
 
